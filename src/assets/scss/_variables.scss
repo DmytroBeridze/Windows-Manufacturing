@@ -1,0 +1,16 @@
+:root{
+    --green:#5E9E43;
+    --blue:#0D8FE3;
+    --blackTxt:#000000;
+    --whiteTxt:#FFFFFF;
+    --gray: #a8a8a8;
+    --yellowBtn: linear-gradient(#ffea23 0%,#feb700 100%);
+
+}
+// @mixin yellowBtn {
+//     background:  #ffea23; /* Old browsers */
+//     background: -moz-linear-gradient(top,  #ffea23 0%, #feb700 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top,  #ffea23 0%,#feb700 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom,  #ffea23 0%,#feb700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffea23', endColorstr='#feb700',GradientType=0 ); /* IE6-9 */
+// }

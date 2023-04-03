@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    color: var( --blackTxt);
+}
+// -----------------------Header
+.header{
+    padding-top: 30px;
+}
+.container{
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header-inner{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+.header__button{
+    display: flex;
+    align-items: center;
+}
+
+.header__workind-time{
+    display: flex;
+    align-items: center;
+}
+.header__contacts{
+    // display: flex;
+    // align-items: center;
+}
+
+
+
+
+
+
+
+
+
