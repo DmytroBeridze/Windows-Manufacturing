@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./fonts.scss";
 
 *{
     box-sizing: border-box;
@@ -15,7 +16,8 @@ body{
 }
 // -----------------------Header
 .header{
-    padding-top: 30px;
+    padding: 20px 0;
+    // background-color: antiquewhite;
 }
 .container{
     width: 100%;
@@ -24,7 +26,7 @@ body{
     padding: 0 15px;
 }
 .header-inner{
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,23 +36,91 @@ body{
     display: flex;
     align-items: center;
 }
+
+.logo-title{
+    font-family: "OpenSans-Regular_400";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: var( --blue);
+    max-width: 30rem;
+    margin: 0 20px ;
+}
 .header__button{
     display: flex;
     align-items: center;
+    width: 160px;
+   background-color: var( --whiteTxt);
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    padding: 11px;
+    cursor: pointer;
 }
-
+.header__button_description{
+    // margin:0 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: var(--green);
+    font-family: "OpenSans-Bold_700";
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.header__button_icon{
+    // margin-right: 10px;
+}
 .header__workind-time{
     display: flex;
     align-items: center;
 }
-.header__contacts{
-    // display: flex;
-    // align-items: center;
+.workind-time_description{
+    margin-left: 20px;
 }
 
+.workind-time_description p{
+    font-family: "OpenSans-Regular_400";
+    font-size: 1.5rem;
+}
+.workind-time_description span{
 
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.8rem;
+}
+.header__contacts{
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    align-items: flex-end;
+}
+.contact-phone{
+    // display: table-cell;
+    // vertical-align: middle;
+    display: flex;
+    align-items: center;
 
+}
+.phone-number{
+    font-family: "OpenSans-Bold_700";
+    font-size: 2.5rem;
+}
+.phone-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.phone-icon img{
+    width: 100%;
+}
+.order-call{
+    font-family: "OpenSans-Regular_400";
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-top: 5px;
+}
 
+// ----------------------------main
 
 
 
