@@ -129,7 +129,34 @@ body{
     background-repeat: no-repeat;
     // background-position: 48% ;
 }
+// !-----------------
+.temp{
+    border: 1px solid red;
+    height: 100%;
+}
+.main__info_options{
+    display: flex;
+}
+.options__icon-container{
+    position: relative;
+    width: 110px;
+}
+.options__icon-container img{
+    width: 100%;
+}
+.options__icon_title{
+    font-family: "OpenSans-Bold_700";
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--whiteTxt);
 
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
 
-
-
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
