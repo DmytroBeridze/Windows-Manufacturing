@@ -124,18 +124,39 @@ body{
 
     width: 100%;
     height: 640px;
-    // background-color: aqua;
     background-image: url("./img/main/bg.png");
     background-repeat: no-repeat;
+    padding: 131px 0 120px;
     // background-position: 48% ;
 }
-// !-----------------
-.temp{
-    border: 1px solid red;
-    height: 100%;
+
+.container__main{
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid red;
 }
+// -----------------------title
+.main__content{
+    display: flex;
+    flex-direction: column;
+
+}
+.main__info_title{
+    font-family: "OpenSans-Bold_700";
+    font-size:2.5rem ;
+    
+}
+.main__info_price{
+    font-family: "OpenSans-Bold_700";
+    font-size:5.5rem ;
+    margin-top: 2rem;
+}
+// ------------------main icons 
 .main__info_options{
     display: flex;
+    align-items: flex-end;
+    gap: 35px;
+    margin-top: 125px;
 }
 .options__icon-container{
     position: relative;
@@ -155,8 +176,76 @@ body{
     left: 0;
     right: 0;
     margin: auto;
+    width: 90px;
+    text-align: center;
 
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+}
+// .options__icon_title > div{
+//     text-align: center;
+// }
+
+// ------------modal window
+.modal-window__container{
+    margin-left: 200px;
+}
+.modal-window{
+    background-color:var(--whiteTxt);
+    width: 360px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal__title{
+    font-family: "OpenSans-Bold_700";
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.modal__title span {
+    font-size: 2.2rem;
+}
+.modal__input{
+    width: 100%;
+    font-family: "OpenSans-Regular_400";
+    font-size: 1.5rem;
+    text-align: center;
+    // color: var(--gray);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid var(--gray); 
+    border-radius: 10px;
+    outline: none;
+}
+.modal__input:focus {
+    border: 1px solid var( --blue);
+    box-shadow: 0px 0px 11px -1px rgba(13,143,227,0.53);
+  }
+// .modal__input:focus::-webkit-input-placeholder {
+//     color: transparent
+//   }
+.modal__button{
+    border: 1px solid var(--orange);
+    width: 100%;
+    background: var(--yellowBtn);
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 25px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(252,180,73,0.59);
+    cursor: pointer;
+}
+.modal__info{
+    font-family: "OpenSans-Regular_400";
+    font-size: 1.3rem;
 }
