@@ -2,6 +2,14 @@
 @media only screen and (max-width:1500px){
     // 
 }
+
+// custom for project
+@media screen and (max-width:1400px){
+    .main{
+        background-position:48% ;
+    }
+}
+
 // Large Devices Wide Screen
 @media only screen and (max-width:1200px){
     // 
@@ -9,9 +17,7 @@
 
 // Medium Devices Desktop
 @media only screen and (max-width:992px){
-   .test{
-    background-color: aqua;
-   }
+   
 }
 
 //Small Devices Tablets

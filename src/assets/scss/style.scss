@@ -26,7 +26,6 @@ body{
     padding: 0 15px;
 }
 .header-inner{
-    // border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,6 +127,7 @@ body{
     background-repeat: no-repeat;
     padding: 131px 0 120px;
     // background-position: 48% ;
+
 }
 
 .container__main{
@@ -188,13 +188,19 @@ body{
 // }
 
 // ------------modal window
+.status{
+    color: var(--red);
+    font-family: "OpenSans-Regular_400";
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
 .modal-window__container{
     margin-left: 200px;
 }
 .modal-window{
     background-color:var(--whiteTxt);
     width: 360px;
-    height: 450px;
+    // height: 450px;
     border-radius: 10px;
     padding: 40px 40px;
     display: flex;
@@ -212,6 +218,7 @@ body{
 }
 .modal__title span {
     font-size: 2.2rem;
+    text-align: center;
 }
 .modal__input{
     width: 100%;
@@ -229,9 +236,25 @@ body{
     border: 1px solid var( --blue);
     box-shadow: 0px 0px 11px -1px rgba(13,143,227,0.53);
   }
-// .modal__input:focus::-webkit-input-placeholder {
-//     color: transparent
-//   }
+
+//    disappear placeholder
+.modal__input:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+.modal__input:focus::-moz-placeholder {
+  color: transparent
+}
+
+.modal__input:focus:-moz-placeholder {
+  color: transparent
+}
+
+.modal__input:focus:-ms-input-placeholder {
+  color: transparent
+}
+//      / /  disappear placeholder
+
 .modal__button{
     border: 1px solid var(--orange);
     width: 100%;
@@ -249,3 +272,83 @@ body{
     font-family: "OpenSans-Regular_400";
     font-size: 1.3rem;
 }
+
+// --------------popup
+// .popup__container{
+//     width: 100%;
+//     height: 100vh;
+//     background-color:var(--popupBackground);
+//     z-index: 999;
+//     position:fixed;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+    
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // pointer-events: none;
+//     // opacity: 0;
+//     display: none;
+    
+// }
+.popup__container_style{
+    width: 100%;
+    height: 100vh;
+    background-color:var(--popupBackground);
+    z-index: 999;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // pointer-events: none;
+    // opacity: 0;
+    display: none;
+    
+}
+.popup__style{
+        width: fit-content;
+    max-height: fit-content;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+// .popup{
+//     width: fit-content;
+//     max-height: fit-content;
+//     top: 100px;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     position: absolute;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: row-reverse;
+// }
+.popup__close-button{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.popup__close-button svg{
+
+align-items: center;
+    width:25px;  
+    height: 25px;  
+}
+.popup__close-button path{
+    fill:var(--whiteTxt);
+}
+
+// media queries
+@import "./_adaptive.scss";
