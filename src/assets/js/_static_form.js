@@ -40,13 +40,13 @@ const staticForm = () => {
   //   default:
   //     break;
   // }
-  const renderForm = (containerSelector, number) => {
+  const renderForm = (containerSelector, index) => {
     const container = document.querySelector(containerSelector),
-      windowForm = `${titles[number].close}
+      windowForm = `${titles[index].close}
      <form class="modal-window">
 <h3 class="modal__title">
-  ${titles[number].header}
-  <span>${titles[number].span}</span>
+  ${titles[index].header}
+  <span>${titles[index].span}</span>
 </h3>
 
 <input
@@ -67,7 +67,7 @@ const staticForm = () => {
   name="submit"
   class="modal__button"
   type="submit"
-  value="${titles[number].button}"
+  value="${titles[index].button}"
 />
 
 <div class="modal__info">Ваші дані конфіденційні</div>

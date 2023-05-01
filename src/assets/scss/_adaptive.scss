@@ -8,25 +8,35 @@
     .main{
         background-position:48% ;
     }
+
 }
 
 // Large Devices Wide Screen
 @media only screen and (max-width:1200px){
-    // 
+    .slider__carousel li{
+        width: calc(100%/4);
+    }
+   
 }
 
 // Medium Devices Desktop
 @media only screen and (max-width:992px){
-   
+    .slider__carousel li{
+        width: calc(100%/3);
+    }
 }
 
 //Small Devices Tablets
 @media only screen and (max-width:768px){
-    // 
+    .slider__carousel li{
+        width: calc(100%/2);
+    }
 }
 // Extra Small Devices Phones
 @media only screen and (max-width:480px){
-    // 
+    .slider__carousel li{
+        width: calc(100%);
+    }
 }
 
 // Custom iphone retina
