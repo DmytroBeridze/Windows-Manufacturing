@@ -376,7 +376,7 @@ display: none;
 }
 .slider-arrow:last-child{
 right: -5px;
-
+display: none;
 }
 .slider__carousel{
     list-style: none;
@@ -422,8 +422,71 @@ right: -5px;
     color: var(--dark_blue);
     // color: red
 }
+// -------------------------glazing tabs
+.glazingTabs__wrapper{
+    margin-top:35px ;
+    width: 100%;
+    // background-color: beige;
+    display: flex;
+    
+    
+}
+.glazingTabs-card{
+    border-radius: 5px;
+    border-top: 5px solid var(--blue);
+    background: rgb(197, 244, 251);
+    // max-width: calc(100%/2);
+    width: 585px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 20px 20px;
+    background: linear-gradient( 180deg, #c7dce9 0%, #c7dce9 0%, rgba(255, 255, 255, 0) 100% );
 
+}
+.glazingTabs-card__title{
+    font-family: "OpenSans-Bold_700";
+    color: var(--blue);
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.glazingTabs-card__img-wrapper{
+    margin: 25px 0 40px;
+}
+.glazingTabs-card__img-wrapper img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.glazingTabs-card__description-list{
+    list-style: none;
+    font-family: "OpenSans-Medium_500";
+    font-size: 1.4rem;
+    line-height: 3rem;
+    margin-bottom: 40px;
+    // position: relative;
+}
+.glazingTabs-card__description-list li::before{
+    // Можно так
 
+    // content:url("");
+    // background: url("./img/glazing_section/check.png") no-repeat center;
+
+    // Или так
+    content:url("./img/glazing_section/check.png");
+    vertical-align: middle;
+    display: inline-block;
+    width: 25px; 
+    height: 25px;
+    line-height: 25px; 
+    margin-right: 1.5rem;
+    
+}
+
+.glazingTabs-card__price{
+    display: flex;
+}
 
 // media queries
 @import "./_adaptive.scss";

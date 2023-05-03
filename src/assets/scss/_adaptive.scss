@@ -16,6 +16,10 @@
     .slider__carousel li{
         width: calc(100%/4);
     }
+    .slider-arrow:last-child{
+       
+        display:block;
+        }
    
 }
 

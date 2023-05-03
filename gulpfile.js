@@ -13,6 +13,13 @@ const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
 
 // !----------------dev
+// -----------------------api
+const devApi = () => {
+  return src("./src/api/**")
+    .pipe(dest("./dist/api"))
+    .pipe(browserSync.stream());
+};
+
 // -----------------------html
 const devHtml = () => {
   return (
@@ -98,11 +105,12 @@ const browsersync = () => {
   watch("./src/assets/js/**/*.js", scripts);
   watch("./src/assets/img/**", devImg);
   watch("./src/assets/fonts/**", devImg);
+  watch("./src/api/**", devApi);
 };
 // ---------------------------tasks for start of console
 exports.default = series(
   clean,
-  parallel(devHtml, scripts, devImg, devFonts),
+  parallel(devHtml, scripts, devImg, devFonts, devApi),
   devStyles,
   browsersync
 );
@@ -162,6 +170,6 @@ const jsBuild = () => {
 
 exports.build = series(
   clean,
-  parallel(htmlBuild, cssBuild, jsBuild, devFonts, devImg),
+  parallel(htmlBuild, cssBuild, jsBuild, devFonts, devImg, devApi),
   browsersync
 );
