@@ -1,0 +1,17 @@
+[
+   {
+    "wood":{
+        "cold":{
+            "img":"./img/glazing_section/wood/img_cold.png"
+
+        },
+        "warm":{
+
+        }
+    }
+
+    },
+   { "aluminium":{
+
+    }}
+]
