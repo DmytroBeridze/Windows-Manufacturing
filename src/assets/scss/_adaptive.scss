@@ -15,11 +15,14 @@
 @media only screen and (max-width:1200px){
     .slider__carousel li{
         width: calc(100%/4);
-    }
+    };
     .slider-arrow:last-child{
-       
         display:block;
-        }
+        };
+
+    .decoration__carousel li{
+        width: calc(100%/3);
+    }    
    
 }
 
@@ -27,14 +30,20 @@
 @media only screen and (max-width:992px){
     .slider__carousel li{
         width: calc(100%/3);
-    }
+    };
+    .decoration__carousel li{
+        width: calc(100%/2);
+    }  
 }
 
 //Small Devices Tablets
 @media only screen and (max-width:768px){
     .slider__carousel li{
         width: calc(100%/2);
-    }
+    };
+    .decoration__carousel li{
+        width: calc(100%);
+    }  
 }
 // Extra Small Devices Phones
 @media only screen and (max-width:480px){

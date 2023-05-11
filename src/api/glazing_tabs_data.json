@@ -1,17 +1,92 @@
 [
-   {
-    "wood":{
-        "cold":{
-            "img":"./img/glazing_section/wood/img_cold.png"
-
+        {
+            "type":"wood",
+            "title":"Холодне",
+            "img":"./img/glazing_section/wood/img_cold.png",
+            "structure_thickness":"Конструктивна товщина 42-58 мм.",
+            "glazing":"Скління: поліроване скло (товщиною 4 - 5 мм)",
+            "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: 20-27 дб",
+            "price":"2600 грн.кв.м."
         },
-        "warm":{
-
+        {
+            "type":"wood",
+            "title":"Тепле",
+            "img":"./img/glazing_section/wood/img_warm.png",
+            "structure_thickness":"Конструктивна товщина профілю: 58-78 м",
+            "glazing":"Скління: однокамерні та двокамерні склопакети",
+            "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: до 5 класу",
+            "price":"4000 грн.кв.м."
+        },
+        {
+            "type":"aluminum",
+            "title":"Холодне",
+            "img":"./img/glazing_section/aluminum/cold.jpg",
+            "structure_thickness":"Конструктивна товщина 40-50 мм.",
+            "glazing":"Скління: поліроване скло (товщиною 4 - 5 мм)",
+            "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: 20-27 дб",
+            "price":"4000 грн.кв.м."
+        },
+        {
+            "type":"aluminum",
+            "title":"Тепле",
+            "img":"./img/glazing_section/aluminum/warm.jpg",
+            "structure_thickness":"Конструктивна товщина профілю: 60-68 мм",
+            "glazing":"Скління: однокамерні та двокамерні склопакети",
+            "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: до 5 класу",
+            "price":"8000 грн.кв.м."
+        },
+        {
+            "type":"plastic",
+            "title":"Тепле",
+            "img":"./img/glazing_section/plastic/warm.jpg",
+            "structure_thickness":"Конструктивна товщина 58-70 мм.",
+            "glazing":"Скління: однокамерні та двокамерні склопакети",
+            "thermal_insulation":"Теплоізоляція: 0,63-1,05 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: до 5 класа",
+            "price":"5500 грн.кв.м."
+        },
+        {
+            "type":"french",
+            "title":"Пластик",
+            "img":"./img/glazing_section/french/plastic.jpg",
+            "structure_thickness":"Конструктивна товщина: 58-70 мм",
+            "glazing":"Скління: однокамерні та двокамерні склопакети",
+            "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: до 5 класу",
+            "price":"5500 грн.кв.м."
+        },
+        {
+            "type":"french",
+            "title":"Алюміній",
+            "img":"./img/glazing_section/french/aluminum.jpg",
+            "structure_thickness":"Конструктивна товщина профілю 60-68 мм",
+            "glazing":"Скління: однокамерні та двокамерні склопакети",
+            "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: до 5 класу",
+            "price":"8000 грн.кв.м."
+        },
+        {
+            "type":"rise",
+            "title":"Алюміній",
+            "img":"./img/glazing_section/rise/aluminum.jpg",
+            "structure_thickness":"Конструктивна товщина : 40-50 мм",
+            "glazing":"Скління: поліроване скло (товщиною 4 - 5 мм)",
+            "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: 20-27 дб",
+            "price":"4000 грн.кв.м."
+        },
+        {
+            "type":"rise",
+            "title":"Дерево",
+            "img":"./img/glazing_section/rise/tree.jpg",
+            "structure_thickness":"Конструктивна товщина профілю 40-42 мм",
+            "glazing":"Скління: поліроване скло (товщиною 4 мм)",
+            "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
+            "soundproofing":"Звукоізоляція: 20-27 дб",
+            "price":"8000 грн.кв.м."
         }
-    }
-
-    },
-   { "aluminium":{
-
-    }}
 ]

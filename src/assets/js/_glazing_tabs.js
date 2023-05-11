@@ -1,3 +1,5 @@
+import tabs_switching_module from "./_tabs_switching_module";
+
 const glazing_tabs = () => {
   const tabsRender = (container) => {
     const tabsContainer = document.querySelector(container);
@@ -5,33 +7,52 @@ const glazing_tabs = () => {
     const glazingFetch = async () => {
       const request = await fetch("./api/glazing_tabs_data.json");
       const response = await request.json();
-      console.log(response[0].wood.cold.img);
-      console.log(response);
 
-      let tabsCard = `<div class="glazingTabs-card">
+      const tabsType = {
+        Тепле: "warm",
+        Холодне: "cold",
+        Пластик: "cold",
+        Алюміній: "warm",
+        Дерево: "warm",
+      };
+
+      response.forEach((elem) => {
+        // ---------for change color "aluminum" card in block "Скління з виносом"
+        if (elem.type == "rise") {
+          tabsType.Алюміній = "cold";
+        }
+        // ---------for change border top radius and color title in block "Скління пластиковими рамками"
+        if (elem.type == "plastic") {
+          tabsType[elem.title] = "warm_plastic";
+        }
+
+        let tabsCard = `<div class="glazingTabs-card ${
+          tabsType[elem.title]
+        }"data-type="${elem.type}">
 <div class="glazingTabs-card__description">
-  
-  <h3 class="glazingTabs-card__title">Холодне</h3>
+  <h3 class="glazingTabs-card__title ${tabsType[elem.title]}" >${
+          elem.title
+        }</h3>
   <div class="glazingTabs-card__img-wrapper">
     <img
-      src="${response[0].wood.cold.img}"
+      src="${elem.img}"
       alt="card"
       class="glazingTabs-card__img"
     />
   </div>
   <ul class="glazingTabs-card__description-list">
-    <li>Конструктивная толщина 42-58 мм</li>
-    <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
-    <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
-    <li>Звукоизоляция: 20-27 дб</li>
+    <li>${elem.structure_thickness}</li>
+    <li>${elem.glazing}</li>
+    <li>${elem.thermal_insulation}</li>
+    <li>${elem.soundproofing}</li>
   </ul>
 </div>
 
 
 <div class="glazingTabs-card__price">
   <div class="price-container">
-    <h3>2600 руб.кв.м.</h3>
-    <p>под ключ с установкой</p>
+    <h3>${elem.price}</h3>
+    <p>під ключ із встановленням</p>
   </div>
   <input
     name="button"
@@ -41,8 +62,19 @@ const glazing_tabs = () => {
   />
 </div>`;
 
-      tabsContainer.innerHTML = tabsCard;
+        tabsContainer.innerHTML += tabsCard;
+      });
+      // --------------Active tabs
+      const activeTabs = document.querySelectorAll(
+        ".glazingTabs-card[data-type='wood']"
+      );
+      activeTabs.forEach((elem) => {
+        elem.style.display = "flex";
+      });
+      // --------------tabs switching
+      tabs_switching_module();
     };
+
     glazingFetch();
   };
 

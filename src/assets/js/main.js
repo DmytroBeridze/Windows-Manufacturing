@@ -4,6 +4,7 @@ import staticForm from "./_static_form";
 import modal from "./_modal";
 import slider from "./_slider";
 import glazing_tabs from "./_glazing_tabs.js";
+// import tabs_switching_module from "./_tabs_switching_module";
 window.addEventListener("DOMContentLoaded", () => {
   main_icons_module();
   staticForm();
@@ -11,4 +12,5 @@ window.addEventListener("DOMContentLoaded", () => {
   modal();
   slider();
   glazing_tabs();
+  // tabs_switching_module();
 });

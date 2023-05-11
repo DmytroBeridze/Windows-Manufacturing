@@ -372,11 +372,11 @@ align-items: center;
    
 }
 .slider-arrow:first-child{
-left: -5px;
+left: 3px;
 display: none;
 }
 .slider-arrow:last-child{
-right: -5px;
+right: 3px;
 display: none;
 }
 .slider__carousel{
@@ -424,6 +424,23 @@ display: none;
     // color: red
 }
 // -------------------------glazing tabs
+
+// animation
+.faded{
+animation-name: transparent;
+animation-duration: 1.5s;
+}
+@keyframes transparent{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+
+
 .glazingTabs__wrapper{
     margin-top:35px ;
     width: 100%;
@@ -432,17 +449,29 @@ display: none;
     
 }
 .glazingTabs-card{
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    // border-radius: 5px;
     border-top: 5px solid var(--blue);
-    background: rgb(197, 244, 251);
     max-width: calc(100%/2);
-    // width: 585px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 45px 60px 20px;
     background: linear-gradient( 180deg, #c7dce9 0%, #c7dce9 0%, rgba(255, 255, 255, 0) 100% );
+    display: none;
 
+}
+.glazingTabs-card.warm{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    background: linear-gradient( 180deg, #f7eac9 0%, #f7eac9 0%, rgba(255, 255, 255, 0) 100% );
+    border-top: 5px solid var(--orange);
+}
+.glazingTabs-card.warm_plastic{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient( 180deg, #f7eac9 0%, #f7eac9 0%, rgba(255, 255, 255, 0) 100% );
+    border-top: 5px solid var(--orange);
+    
 }
 .glazingTabs-card__title{
     font-family: "OpenSans-Bold_700";
@@ -451,6 +480,11 @@ display: none;
     line-height: 1.9rem;
     text-transform: uppercase;
     text-align: center;
+}
+.glazingTabs-card__title.warm,
+.glazingTabs-card__title.warm_plastic{
+color: var(--orange);
+
 }
 .glazingTabs-card__img-wrapper{
     margin: 25px 0 40px;
@@ -465,7 +499,7 @@ display: none;
     font-size: 1.4rem;
     line-height: 3rem;
     margin-bottom: 40px;
-    // position: relative;
+    
 }
 .glazingTabs-card__description-list li::before{
     // Можно так
@@ -508,5 +542,61 @@ margin-bottom: 15px;
 .modal__button{
     width: 280px
 }
+
+// -----------section decoration
+.decoration__container{
+    background-color:var(--sectionBackground);
+    padding-top: 80px;
+
+}
+.decoration__slider-wrapper{
+    padding: 80px 0px;
+    width: 100%;
+    position: relative;
+    
+}
+
+.decoration__header h2{
+    text-transform: uppercase;
+    font-family: "OpenSans-Bold_700";
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: center
+}
+.decoration__carousel{
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+.decoration__carousel li{
+    width: calc(100%/4);
+    width: max-content; // ---!!! для вирівнювання відступів
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "OpenSans-Bold_700";
+    padding: 20px 33px;
+    cursor: pointer;
+    
+};
+.decoration__carousel li:first-child{
+    background: linear-gradient( 180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100% );
+    border-top: 10px solid var(--blue)
+}
+.border_top{
+    background: linear-gradient( 180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100% );
+    border-top: 10px solid var(--blue)
+
+}
+.decoration__carousel li a{
+    color: var(--blackTxt);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--blackTxt);
+}
+
 // media queries
 @import "./_adaptive.scss";
