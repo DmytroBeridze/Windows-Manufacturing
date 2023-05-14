@@ -2,7 +2,7 @@ const slider = () => {
   const sliderSwitching = (sliderSelector, sliderCardSelector, url) => {
     const glazingDataURL = url;
     const sliderCarousel = document.querySelector(sliderSelector);
-    let sliderStructureSelector = sliderSelector.replace(/\./, "");
+    const sliderStructureSelector = sliderSelector.replace(/\./, "");
 
     // ----------------------------------fetch
     const glazingFetch = async (url) => {

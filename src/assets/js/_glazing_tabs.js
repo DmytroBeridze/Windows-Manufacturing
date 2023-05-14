@@ -47,8 +47,6 @@ const glazing_tabs = () => {
     <li>${elem.soundproofing}</li>
   </ul>
 </div>
-
-
 <div class="glazingTabs-card__price">
   <div class="price-container">
     <h3>${elem.price}</h3>

@@ -110,6 +110,7 @@ const staticForm = () => {
   renderForm(".modal-window__container", 0);
   renderForm(".popup", 1);
   renderForm(".callback-popup", 2);
+  renderForm(".decorationTabs__content_form-container", 0);
 };
 
 export default staticForm;

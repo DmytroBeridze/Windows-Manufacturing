@@ -544,8 +544,11 @@ margin-bottom: 15px;
 }
 
 // -----------section decoration
-.decoration__container{
+.decoration{
+
     background-color:var(--sectionBackground);
+}
+.decoration__container{
     padding-top: 80px;
 
 }
@@ -596,6 +599,69 @@ margin-bottom: 15px;
     color: var(--blackTxt);
     text-decoration: none;
     border-bottom: 1px dotted var(--blackTxt);
+}
+
+
+// ----------------------decoration tabs
+.decorationTabs__wrapper{
+    position: relative;
+    padding-bottom: 100px;
+}
+.decorationTabs__content_form-container{
+    position: absolute;
+    // width: 200px;
+    // height: 150px;
+    background: #c7dce9;
+    right: 0;
+    top: 20px;
+}
+
+.decorationTabs__card{
+max-width: 100%;
+// background: #c7dce9;
+display: flex
+}
+.decorationTabs__img{
+
+}
+.decorationTabs__content_wrapper{
+// background: #f7eac9;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 15px
+
+}
+.decorationTabs__content_card{
+width: 155px;
+// background: #f6f7f7;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.decorationTabs__content_card-img{
+    margin-top: 22px;
+}
+
+.decorationTabs__content_card-title{
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    min-height: 40px;
+    text-align: center;
+    margin: 20px 0 10px
+}
+.decorationTabs__content_card-price{
+    color: var(--blue);
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.decorationTabs__content_card-desc{
+    font-family: "OpenSans-Medium_500";
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 0px;
 }
 
 // media queries
