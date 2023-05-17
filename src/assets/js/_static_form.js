@@ -4,6 +4,7 @@ const staticForm = () => {
       header: "Запишіться сьогодні на",
       span: "БЕЗКОШТОВНИЙ ЗАМІР",
       button: "викликати замірника",
+      close: `<div class="popup__close-button" style="display:none;"></div>`,
     },
     {
       header: "Запишіться сьогодні на",

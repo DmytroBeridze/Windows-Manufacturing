@@ -13,6 +13,7 @@ const tabs_switching_module = () => {
     content.forEach((elem) => {
       elem.classList.add("faded");
     });
+
     // ---------------Show selector object
     // const obj = {
     //   0: "wood",
@@ -28,15 +29,24 @@ const tabs_switching_module = () => {
       content.forEach((elem) => {
         elem.style.display = "none";
       });
+      targetItem.forEach((card) => {
+        card.classList.remove("border_top");
+      });
     };
 
     // ---------------Show
     const show = (selector) => {
-      let test = document.querySelectorAll(`[data-type=${obj[selector]}]`);
-      test.forEach((elem) => (elem.style.display = "flex"));
+      let showItem = document.querySelectorAll(`[data-type=${obj[selector]}]`);
+      showItem.forEach((elem) => (elem.style.display = "flex"));
+
+      targetItem[selector].classList.add("border_top");
     };
 
+    show(0);
+
     targetContainer.addEventListener("click", (e) => {
+      e.preventDefault();
+
       if (
         e.target.classList.contains(targetSelector.replace(/\./, "")) ||
         e.target.parentNode.classList.contains(targetSelector.replace(/\./, ""))
@@ -60,6 +70,16 @@ const tabs_switching_module = () => {
     "plastic",
     "french",
     "rise"
+  );
+  tabsSwitching(
+    ".decoration__carousel",
+    ".decoration__slider_card",
+    ".decorationTabs__card",
+
+    "Interior_decoration",
+    "Exterior_decoration",
+    "Remote_glazing",
+    "Roof_to_balcony"
   );
 };
 export default tabs_switching_module;
