@@ -1,4 +1,5 @@
 import tabs_switching_module from "./_tabs_switching_module";
+import modal from "./_modal.js";
 
 const glazing_tabs = () => {
   const tabsRender = (containerSelector, URL, activeTabSelector) => {
@@ -56,7 +57,7 @@ const glazing_tabs = () => {
           </div>
           <input
             name="button"
-            class="modal__button"
+            class=" modal__button calculation__button"
             type="button"
             value="Розрахувати вартість"
           />
@@ -79,10 +80,10 @@ const glazing_tabs = () => {
 
         // ------------internal cards in decorationTabs__wrapper
         function internalCards(elem) {
-          if (URL == "./api/decorationTabs.json") {
-            let res = "";
+          if (containerSelector == ".decorationTabs__wrapper") {
+            let card = "";
             elem.descriptionCard.forEach((elem) => {
-              res += `<div class="decorationTabs__content_card">
+              card += `<div class="decorationTabs__content_card">
               <div class="decorationTabs__content_card-img">
                 <img src="${elem.descImg}" alt="" />
               </div>
@@ -91,33 +92,33 @@ const glazing_tabs = () => {
               <p class="decorationTabs__content_card-desc">${elem.matherial}</p>
             </div> `;
             });
-            return res;
+            return card;
           }
         }
         // ------------// END internal cards in decorationTabs__wrapper------------------------
+        // TODO---Чого треба викликати тут чого не ьщжна знайти  об'єкт в іншому місці за селектором------
       });
-      // TODO---------------------------active tabs remake logic ?
-      // --------------Active tabs
-      const activeTabs = document.querySelectorAll(activeTabSelector);
-      activeTabs.forEach((elem) => {
-        elem.style.display = "flex";
-      });
-
       // --------------Tabs switching
       tabs_switching_module();
+      // --------------glazing modal open
+      modal(
+        ".calculation__button",
+        ".calculation-popup__container",
+        ".popup__close-button"
+      );
     };
     glazingFetch();
   };
 
   tabsRender(
     ".glazingTabs__wrapper",
-    "./api/glazing_tabs_data.json",
-    ".glazingTabs-card[data-type='wood']"
+    "./api/glazing_tabs_data.json"
+    // ".glazingTabs-card[data-type='wood']"
   );
   tabsRender(
     ".decorationTabs__wrapper",
-    "./api/decorationTabs.json",
-    ".decorationTabs__card[data-type='Interior_decoration']"
+    "./api/decorationTabs.json"
+    // ".decorationTabs__card[data-type='Interior_decoration']"
   );
 };
 export default glazing_tabs;

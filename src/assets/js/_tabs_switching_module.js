@@ -3,6 +3,7 @@ const tabs_switching_module = () => {
     targetContainerSelector,
     targetSelector,
     contentSelector,
+    activeStyle,
     ...obj
   ) => {
     let targetContainer = document.querySelector(targetContainerSelector),
@@ -14,23 +15,13 @@ const tabs_switching_module = () => {
       elem.classList.add("faded");
     });
 
-    // ---------------Show selector object
-    // const obj = {
-    //   0: "wood",
-    //   1: "aluminum",
-    //   2: "plastic",
-    //   3: "french",
-    //   4: "rise",
-    // };
-    // const obj = ["wood", "aluminum", "plastic", "french", "rise"];
-
     // ---------------Hide
     const hide = () => {
       content.forEach((elem) => {
         elem.style.display = "none";
       });
       targetItem.forEach((card) => {
-        card.classList.remove("border_top");
+        card.classList.remove(activeStyle);
       });
     };
 
@@ -39,7 +30,7 @@ const tabs_switching_module = () => {
       let showItem = document.querySelectorAll(`[data-type=${obj[selector]}]`);
       showItem.forEach((elem) => (elem.style.display = "flex"));
 
-      targetItem[selector].classList.add("border_top");
+      targetItem[selector].classList.add(activeStyle);
     };
 
     show(0);
@@ -53,6 +44,7 @@ const tabs_switching_module = () => {
       ) {
         targetItem.forEach((elem, index) => {
           if (e.target == elem || e.target.parentNode == elem) {
+            // console.log(elem);
             hide();
             show(index);
           }
@@ -64,6 +56,7 @@ const tabs_switching_module = () => {
     ".slider__carousel",
     ".slider__card",
     ".glazingTabs-card",
+    "active-border",
 
     "wood",
     "aluminum",
@@ -75,11 +68,14 @@ const tabs_switching_module = () => {
     ".decoration__carousel",
     ".decoration__slider_card",
     ".decorationTabs__card",
+    "border_top",
 
     "Interior_decoration",
     "Exterior_decoration",
     "Remote_glazing",
     "Roof_to_balcony"
   );
+  // tabsSwitching();
+  // console.log(document.querySelectorAll(".slider__card "));
 };
 export default tabs_switching_module;

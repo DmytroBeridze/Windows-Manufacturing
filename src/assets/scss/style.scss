@@ -295,7 +295,7 @@ body{
     
 }
 .popup__style{
-        width: fit-content;
+    width: fit-content;
     max-height: fit-content;
     top: 100px;
     left: 0;
@@ -406,6 +406,11 @@ display: none;
     flex-direction: column;
     align-items: center;
     white-space: normal;
+    opacity: 0.8;
+}
+.active-border{
+    border-top: 1px solid var(--blue);
+    opacity: 1;
 }
 .slider__card img{
     margin-bottom: 20px;
@@ -438,6 +443,86 @@ animation-duration: 1.5s;
         opacity: 1;
 
     }
+}
+// ----------------glazing calculation modal window
+
+.calculation__modal.modal-window{
+    width: fit-content;
+    background-color:var(--whiteTxt);
+    border-radius: 10px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.calculation__modal_title{
+    font-family: "OpenSans-Bold_700";
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.calculation__modal_title ~ p{
+    font-family: "OpenSans-Regular_400";
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.2rem;
+    margin-bottom: 30px;
+    width: 250px;
+}
+.calculation__preview_container{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+.calculation___fullsize_container{
+    display: flex;
+    justify-content: center
+}
+.calculation___fullsize_container img{
+width: 300px;
+margin-bottom: 30px;
+}
+.calculation__size{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 30px;
+}
+.calculation__size input{
+width: 100px;
+padding: 6px 10px;
+display: inline-block;
+font-family: "OpenSans-Medium_500";
+font-size: 1.5rem;
+border-radius: 5px;
+border: 1px solid var(--gray);
+outline: none;
+margin-right: 5px;
+}
+.calculation__size input:focus{
+    border: 1px solid var( --blue);
+    box-shadow: 0px 0px 11px -1px rgba(13,143,227,0.53);
+  }
+
+
+
+.calculation__size input::placeholder{
+    color: var(--gray);
+}
+.calculation__size label{
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+.calculation__size span{
+    font-family: "OpenSans-Bold_700";
+    font-size: 2rem; 
+    color: var(--blackTxt);
+    margin: 0 5px;
 }
 
 
@@ -545,7 +630,6 @@ margin-bottom: 15px;
 
 // -----------section decoration
 .decoration{
-
     background-color:var(--sectionBackground);
 }
 .decoration__container{
