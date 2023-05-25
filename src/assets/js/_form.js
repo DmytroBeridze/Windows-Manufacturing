@@ -1,4 +1,4 @@
-const form = () => {
+const form = (modalState) => {
   const URL = "https://test-key-d6afb-default-rtdb.firebaseio.com/test.json",
     forms = document.querySelectorAll("form"),
     nameInput = document.querySelectorAll("[name=user_name]"),
@@ -47,6 +47,16 @@ const form = () => {
       e.preventDefault();
       elem.appendChild(messageContainer);
       let formData = new FormData(elem);
+
+      // -------order calculator data
+      if (
+        (elem.parentNode.classList = "calculation__order-popup popup__style")
+      ) {
+        for (let key in modalState) {
+          formData.set(key, modalState[key]);
+        }
+      }
+
       let userData = Object.fromEntries(formData);
       formRequest(URL, userData)
         .then(() => {

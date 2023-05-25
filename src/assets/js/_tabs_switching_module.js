@@ -37,6 +37,7 @@ const tabs_switching_module = () => {
 
     targetContainer.addEventListener("click", (e) => {
       e.preventDefault();
+      console.log(e.target);
 
       if (
         e.target.classList.contains(targetSelector.replace(/\./, "")) ||
@@ -44,7 +45,6 @@ const tabs_switching_module = () => {
       ) {
         targetItem.forEach((elem, index) => {
           if (e.target == elem || e.target.parentNode == elem) {
-            // console.log(elem);
             hide();
             show(index);
           }
@@ -74,6 +74,18 @@ const tabs_switching_module = () => {
     "Exterior_decoration",
     "Remote_glazing",
     "Roof_to_balcony"
+  );
+
+  tabsSwitching(
+    ".calculation__preview_container",
+    ".calculation__preview_icon",
+    ".calculation___fullsize_container img",
+    "icon-zoom",
+
+    "type1",
+    "type2",
+    "type3",
+    "type4"
   );
   // tabsSwitching();
   // console.log(document.querySelectorAll(".slider__card "));
