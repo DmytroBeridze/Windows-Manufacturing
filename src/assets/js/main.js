@@ -1,5 +1,5 @@
 import main_icons_module from "./_main_icons_module";
-import form from "./_form";
+import form from "./form";
 import staticForm from "./_static_form";
 import modal from "./_modal";
 import slider from "./_slider";
@@ -26,9 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
   glazing_tabs();
 
   let modalState = {};
-  form(modalState);
-
   orderCalculator(modalState);
+  form(modalState);
 
   // orderCalculator(windowForm, "click", "window-form");
 });

@@ -5,6 +5,20 @@ const orderCalculator = (modalState) => {
     glazingType = document.querySelectorAll("#glazing-type"),
     temperatureType = document.querySelectorAll(".glazingtype__checkbox");
 
+  // width heiht inputs check
+
+  const withHeithCheck = (item) => {
+    item.forEach((elem) => {
+      elem.addEventListener("input", () => {
+        elem.value = elem.value.replace(/\D/, "");
+      });
+    });
+  };
+
+  withHeithCheck(width);
+  withHeithCheck(height);
+
+  // ----------------------calculator
   const calculator = (node, event, prop) => {
     node.forEach((elem, index) => {
       elem.addEventListener(event, (e) => {

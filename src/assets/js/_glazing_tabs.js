@@ -63,7 +63,7 @@ const glazing_tabs = () => {
           />
         </div>`,
 
-          decorationTabs__wrapper: `<div class="decorationTabs__card" data-type="${
+          decorationTabs__content: `<div class="decorationTabs__card" data-type="${
             elem.name
           }">
             <div class="decorationTabs__img">
@@ -80,7 +80,7 @@ const glazing_tabs = () => {
 
         // ------------internal cards in decorationTabs__wrapper
         function internalCards(elem) {
-          if (containerSelector == ".decorationTabs__wrapper") {
+          if (containerSelector == ".decorationTabs__content") {
             let card = "";
             elem.descriptionCard.forEach((elem) => {
               card += `<div class="decorationTabs__content_card">
@@ -115,10 +115,10 @@ const glazing_tabs = () => {
     "./api/glazing_tabs_data.json"
     // ".glazingTabs-card[data-type='wood']"
   );
-  tabsRender(
-    ".decorationTabs__wrapper",
-    "./api/decorationTabs.json"
-    // ".decorationTabs__card[data-type='Interior_decoration']"
-  );
+  // tabsRender(
+  //   ".decorationTabs__wrapper",
+  //   "./api/decorationTabs.json"
+  // );
+  tabsRender(".decorationTabs__content", "./api/decorationTabs.json");
 };
 export default glazing_tabs;

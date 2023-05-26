@@ -3,7 +3,8 @@ const form = (modalState) => {
     forms = document.querySelectorAll("form"),
     nameInput = document.querySelectorAll("[name=user_name]"),
     phoneInput = document.querySelectorAll("[name=user_phone]");
-
+  console.log(forms);
+  console.log(document.querySelectorAll(".modal-window"));
   // --------------------------status mesage
   const messageContainer = document.createElement("div");
   messageContainer.classList.add("status");
@@ -49,9 +50,8 @@ const form = (modalState) => {
       let formData = new FormData(elem);
 
       // -------order calculator data
-      if (
-        (elem.parentNode.classList = "calculation__order-popup popup__style")
-      ) {
+
+      if (elem.parentNode.classList.contains("calculation__order-popup")) {
         for (let key in modalState) {
           formData.set(key, modalState[key]);
         }
@@ -69,6 +69,7 @@ const form = (modalState) => {
             elem.value = "";
             // elem.placeholder = "Введіть телефон";
           });
+
           // staus message
           messageContainer.textContent = stausMessage.success;
         })
