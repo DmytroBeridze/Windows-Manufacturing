@@ -23,7 +23,7 @@ body{
     width: 100%;
     max-width: 1200px; 
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 .header-inner{
     display: flex;
@@ -328,7 +328,7 @@ align-items: center;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 80px 15px ;
+   padding: 80px 30px ;
 }
 
 .glazing__header{
@@ -338,11 +338,14 @@ align-items: center;
     align-items: center;
     margin-bottom: 80px;
 }
-.glazing__header h2{
+.glazing__header h2,
+.decoration__header h2,
+.works__header h2{
     text-transform: uppercase;
     font-family: "OpenSans-Bold_700";
     font-size: 3rem;
     margin: 20px 0;
+    text-align: center;
 }
 .glazing__header_sub{
     width: 100%;
@@ -740,13 +743,13 @@ margin-bottom: 15px;
     
 }
 
-.decoration__header h2{
-    text-transform: uppercase;
-    font-family: "OpenSans-Bold_700";
-    font-size: 3rem;
-    margin: 20px 0;
-    text-align: center
-}
+// .decoration__header h2{
+//     text-transform: uppercase;
+//     font-family: "OpenSans-Bold_700";
+//     font-size: 3rem;
+//     margin: 20px 0;
+//     text-align: center
+// }
 .decoration__carousel{
     // display: flex;
     // justify-content: space-between;
@@ -852,5 +855,63 @@ align-items: center;
     line-height: 0px;
 }
 
+// -----------------galery
+
+// .galery__header{
+//     text-transform: uppercase;
+//     font-family: "OpenSans-Bold_700";
+//     font-size: 3rem;
+//     margin: 20px 0;
+//     text-align: center
+// }
+.works__container {
+padding: 50px 0;
+}
+
+.works__header{
+margin-bottom: 80px;
+
+}
+.works__galery{
+    // background-color: aqua;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 15px
+}
+.works__galery li{
+cursor: pointer;
+
+}
+.works__galery_bigImg{
+max-width: 700px;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+position: absolute
+}
+
+.works-faded{
+
+animation-name:worksTransparent;
+animation-duration: 0.3s 
+
+}
+
+@keyframes worksTransparent {
+    from{
+opacity: 0.1
+    }
+    to{
+opacity: 1
+
+    }
+} 
+
 // media queries
 @import "./_adaptive.scss";
+
+

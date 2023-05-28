@@ -5,6 +5,7 @@ import modal from "./_modal";
 import slider from "./_slider";
 import glazing_tabs from "./_glazing_tabs";
 import orderCalculator from "./orderCalculator";
+import galery from "./galery";
 window.addEventListener("DOMContentLoaded", () => {
   main_icons_module();
   staticForm();
@@ -28,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let modalState = {};
   orderCalculator(modalState);
   form(modalState);
+  galery();
 
   // orderCalculator(windowForm, "click", "window-form");
 });

@@ -3,8 +3,6 @@ const form = (modalState) => {
     forms = document.querySelectorAll("form"),
     nameInput = document.querySelectorAll("[name=user_name]"),
     phoneInput = document.querySelectorAll("[name=user_phone]");
-  console.log(forms);
-  console.log(document.querySelectorAll(".modal-window"));
   // --------------------------status mesage
   const messageContainer = document.createElement("div");
   messageContainer.classList.add("status");
