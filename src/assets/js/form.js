@@ -1,4 +1,4 @@
-const form = (modalState) => {
+const form = (modalState, decorationState) => {
   const URL = "https://test-key-d6afb-default-rtdb.firebaseio.com/test.json",
     forms = document.querySelectorAll("form"),
     nameInput = document.querySelectorAll("[name=user_name]"),
@@ -52,6 +52,13 @@ const form = (modalState) => {
       if (elem.parentNode.classList.contains("calculation__order-popup")) {
         for (let key in modalState) {
           formData.set(key, modalState[key]);
+        }
+      }
+      // -------order decoration data
+
+      if (elem.parentNode.matches(".decorationTabs__content_form-container")) {
+        for (let key in decorationState) {
+          formData.set(key, decorationState[key]);
         }
       }
 

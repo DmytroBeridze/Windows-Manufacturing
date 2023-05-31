@@ -37,7 +37,6 @@ const tabs_switching_module = () => {
 
     targetContainer.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log(e.target);
 
       if (
         e.target.classList.contains(targetSelector.replace(/\./, "")) ||
@@ -52,6 +51,7 @@ const tabs_switching_module = () => {
       }
     });
   };
+  // ---------------------glazing slider
   tabsSwitching(
     ".slider__carousel",
     ".slider__card",
@@ -64,6 +64,7 @@ const tabs_switching_module = () => {
     "french",
     "rise"
   );
+  // --------------------decoration slider
   tabsSwitching(
     ".decoration__carousel",
     ".decoration__slider_card",
@@ -75,7 +76,7 @@ const tabs_switching_module = () => {
     "Remote_glazing",
     "Roof_to_balcony"
   );
-
+  // ------------------calculator slider
   tabsSwitching(
     ".calculation__preview_container",
     ".calculation__preview_icon",

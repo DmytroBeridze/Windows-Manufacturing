@@ -21,7 +21,7 @@ body{
 }
 .container{
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1250px; 
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -824,11 +824,12 @@ gap: 15px
 }
 .decorationTabs__content_card{
 width: 155px;
-// background: #f6f7f7;
 display: flex;
 flex-direction: column;
 align-items: center;
+cursor: pointer;
 }
+
 .decorationTabs__content_card-img{
     margin-top: 22px;
 }
@@ -901,6 +902,12 @@ animation-duration: 0.3s
 
 }
 
+.im{
+    border: 2px solid red;
+    border-radius: 50%
+}
+
+
 @keyframes worksTransparent {
     from{
 opacity: 0.1
@@ -910,6 +917,7 @@ opacity: 1
 
     }
 } 
+
 
 // media queries
 @import "./_adaptive.scss";

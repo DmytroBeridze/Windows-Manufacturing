@@ -6,6 +6,7 @@ import slider from "./_slider";
 import glazing_tabs from "./_glazing_tabs";
 import orderCalculator from "./orderCalculator";
 import galery from "./galery";
+import orderDecoration from "./orderDecoration";
 window.addEventListener("DOMContentLoaded", () => {
   main_icons_module();
   staticForm();
@@ -22,13 +23,14 @@ window.addEventListener("DOMContentLoaded", () => {
     ".calculation-order__container",
     ".popup__close-button"
   );
-
   slider();
-  glazing_tabs();
 
+  let decorationState = {};
   let modalState = {};
+
+  glazing_tabs(decorationState);
   orderCalculator(modalState);
-  form(modalState);
+  form(modalState, decorationState);
   galery();
 
   // orderCalculator(windowForm, "click", "window-form");

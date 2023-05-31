@@ -1,7 +1,9 @@
 import tabs_switching_module from "./_tabs_switching_module";
 import modal from "./_modal.js";
+import orderDecoration from "./orderDecoration";
+import form from "./form";
 
-const glazing_tabs = () => {
+const glazing_tabs = (decorationState) => {
   const tabsRender = (containerSelector, URL, activeTabSelector) => {
     const tabsContainer = document.querySelector(containerSelector),
       tabsStructureContainerSelector = containerSelector.replace(/\./, "");
@@ -98,6 +100,7 @@ const glazing_tabs = () => {
         // ------------// END internal cards in decorationTabs__wrapper------------------------
         // TODO---Чого треба викликати тут чого не можна знайти  об'єкт в іншому місці за селектором------
       });
+
       // --------------Tabs switching
       tabs_switching_module();
       // --------------glazing modal open
@@ -106,19 +109,14 @@ const glazing_tabs = () => {
         ".calculation-popup__container",
         ".popup__close-button"
       );
+      // --------------decoration order
+      orderDecoration(decorationState);
     };
+
     glazingFetch();
   };
 
-  tabsRender(
-    ".glazingTabs__wrapper",
-    "./api/glazing_tabs_data.json"
-    // ".glazingTabs-card[data-type='wood']"
-  );
-  // tabsRender(
-  //   ".decorationTabs__wrapper",
-  //   "./api/decorationTabs.json"
-  // );
   tabsRender(".decorationTabs__content", "./api/decorationTabs.json");
+  tabsRender(".glazingTabs__wrapper", "./api/glazing_tabs_data.json");
 };
 export default glazing_tabs;
