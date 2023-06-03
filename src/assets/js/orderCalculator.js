@@ -6,7 +6,6 @@ const orderCalculator = (modalState) => {
     temperatureType = document.querySelectorAll(".glazingtype__checkbox");
 
   // width heiht inputs check
-
   const withHeithCheck = (item) => {
     item.forEach((elem) => {
       elem.addEventListener("input", () => {
@@ -18,11 +17,12 @@ const orderCalculator = (modalState) => {
   withHeithCheck(width);
   withHeithCheck(height);
 
+  // form data default
+  modalState.form = 0;
   // ----------------------calculator
   const calculator = (node, event, prop) => {
     node.forEach((elem, index) => {
       elem.addEventListener(event, (e) => {
-        // console.log(e.target);
         switch (elem.tagName) {
           case "LI":
             modalState[prop] = index;

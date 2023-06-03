@@ -85,6 +85,7 @@ const staticForm = () => {
   renderForm(".callback-popup", 2);
   renderForm(".decorationTabs__content_form-container", 0);
   renderForm(".calculation__order-popup", 3);
+  renderForm(".sale-window__container", 0);
 };
 
 export default staticForm;

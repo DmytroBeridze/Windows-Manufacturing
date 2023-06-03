@@ -340,7 +340,9 @@ align-items: center;
 }
 .glazing__header h2,
 .decoration__header h2,
-.works__header h2{
+.works__header h2,
+.payment__haeder
+{
     text-transform: uppercase;
     font-family: "OpenSans-Bold_700";
     font-size: 3rem;
@@ -832,6 +834,12 @@ cursor: pointer;
 
 .decorationTabs__content_card-img{
     margin-top: 22px;
+    border: 3px solid #ebebeb00;
+    border-radius: 50%;
+}
+.content-active{
+    border: 3px solid var(--blue);
+    border-radius: 50%
 }
 
 .decorationTabs__content_card-title{
@@ -866,12 +874,11 @@ cursor: pointer;
 //     text-align: center
 // }
 .works__container {
-padding: 50px 0;
+padding: 50px 0 80px;
 }
 
 .works__header{
 margin-bottom: 80px;
-
 }
 .works__galery{
     // background-color: aqua;
@@ -902,12 +909,6 @@ animation-duration: 0.3s
 
 }
 
-.im{
-    border: 2px solid red;
-    border-radius: 50%
-}
-
-
 @keyframes worksTransparent {
     from{
 opacity: 0.1
@@ -918,6 +919,165 @@ opacity: 1
     }
 } 
 
+// -----------------guarantee section
+
+.guarantee{
+    width: 100%;
+    background: var(--blue);
+    padding: 60px;
+}
+.guarantee__header{
+    margin-bottom: 80px;
+}
+.guarantee__header h2{
+    text-transform: uppercase;
+    font-family: "OpenSans-Bold_700";
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--whiteTxt);
+}
+.guarantee__header_sub{
+    width: 100%;
+    height: 5px;
+background: url("./img/guarantees/header_sub.png");
+background-repeat: no-repeat;
+background-position: center;
+
+// background-image: url("./img/guarantees/header_sub.png");
+// background-repeat: no-repeat;
+// background-position: center;
+
+}
+.guarantee__block{
+    list-style: none;
+    display: flex;
+    color: var(--whiteTxt);
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap:50px ;
+   
+}
+.guarantee__block li{
+width: calc((100%/3) - 20px);
+padding: 10px 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+height:fit-content;
+
+}
+.guarantee__block li:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.guarantee__block li:last-child{
+    // margin-right:0px;
+}
+.guarantee__block li>p{
+   width: 180px;
+   text-align: center;
+   margin-top: 30px
+   
+}
+
+// -------------------------payment section-
+.payment{
+    padding: 60px 0;
+}
+.payment__row{
+display: flex;
+list-style: none;
+align-items: baseline;
+justify-content: space-between;
+
+}
+.payment__haeder{
+    margin-bottom: 80px;
+}
+.payment__item{
+    display: flex;
+    align-items: center;
+}
+.payment__item span{
+    font-family: "OpenSans-Regular_400";
+    font-size: 2rem;
+    color: var(--blackTxt);
+    margin-left: 20px;
+   
+}
+// ----------sale section 
+.sale{
+    width: 100%;
+    // height: 620px;
+    padding: 80px 0;
+    background-image: url("./img/sale/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat
+}
+.sale__container{
+    display: flex;
+    justify-content: space-between;
+}
+.sale__info h2{
+    font-family: "OpenSans-Bold_700";
+    font-size: 4.8rem;
+    color: var(--blue);
+    margin:20px 0 60px;
+}
+.sale__info p{
+    font-family: "OpenSans-Medium_500";
+    font-size: 2.4rem;
+    width: 400px;
+    line-height: 3.8rem;
+    margin-bottom: 60px;
+}
+.sale__timer{
+    width: 360px;
+    // height: 150px;
+    background: var(--whiteTxt);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sale__timer_header{
+    font-family: "OpenSans-Regular_400";
+    font-size: 2rem;
+    margin-bottom: 5px
+}
+.sale__timer_count{
+    display: flex;
+    
+}
+.count-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.count-element > div{
+  
+    background-color: var(--blackTxt);
+    font-family: "OpenSans-Regular_400";
+    font-size: 4.2rem;
+   
+    padding: 5px;
+    color: var(--whiteTxt);
+    border-radius: 8px
+}
+.count-element > span{
+    font-family: "OpenSans-Regular_400";
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+    
+}
 
 // media queries
 @import "./_adaptive.scss";

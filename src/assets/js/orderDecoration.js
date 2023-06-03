@@ -2,7 +2,15 @@ const orderDecoration = (decorationState) => {
   const order = (containerSelector, elementsSelector, name) => {
     const container = document.querySelectorAll(containerSelector),
       elements = document.querySelectorAll(elementsSelector),
-      targetSelector = elementsSelector.replace(/\./, "");
+      targetSelector = elementsSelector.replace(/\./, ""),
+      decorationElements = document.querySelectorAll(
+        ".decoration__slider_card"
+      );
+
+    // first element data default
+    decorationState.decorationType =
+      decorationElements[0].firstElementChild.textContent;
+
     container.forEach((elem) => {
       elem.addEventListener("click", (e) => {
         if (
@@ -11,19 +19,18 @@ const orderDecoration = (decorationState) => {
           e.target.parentNode.parentNode.classList.contains(targetSelector)
         ) {
           elements.forEach((elem) => {
-            elem.firstElementChild.classList.remove("im");
+            elem.firstElementChild.classList.remove("content-active");
             if (
               e.target == elem ||
               e.target.parentNode == elem ||
               e.target.parentNode.parentNode == elem
             ) {
               if (elem.classList.contains("decoration__slider_card")) {
-                // ! Add first item data default
                 decorationState[name] = elem.firstElementChild.textContent;
               } else {
                 decorationState[name] =
                   elem.firstElementChild.nextElementSibling.textContent;
-                elem.firstElementChild.classList.add("im");
+                elem.firstElementChild.classList.add("content-active");
               }
             }
           });
@@ -38,9 +45,6 @@ const orderDecoration = (decorationState) => {
     "decorationMatherial"
   );
   order(".decoration__carousel", ".decoration__slider_card", "decorationType");
-
-  // order(".decoration__slider_card", "decorationType");
-  // order(".decorationTabs__content_card", "decorationMatherial");
 };
 
 export default orderDecoration;
