@@ -6,34 +6,298 @@
 // custom for project
 @media screen and (max-width:1400px){
     .main{
-        background-position:48% ;
+        background-position:40% ;
     }
-
+    // .container{
+    //     width: 1100px;
+    //     }
 }
 
 // Large Devices Wide Screen
 @media only screen and (max-width:1200px){
+//container
+.container{
+    width: 970px;
+    padding: 0 15px
+};
+
+// header
+.logo-title{
+    max-width: 17rem;
+}
+.header__button{
+    width: 145px;
+    height: 53px;
+    padding: 8px
+    
+};
+.header__button_description{
+    font-family: "OpenSans-Bold_700";
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+};
+.workind-time_description{
+    margin-left: 15px;
+}
+.phone-number{
+    font-size: 2rem;
+}
+
+// slider
     .slider__carousel li{
         width: calc(100%/4);
     };
     .slider-arrow:last-child{
         display:block;
         };
-
     .decoration__carousel li{
         width: calc(100%/3);
     }    
-   
+
+    // glazing tabs
+    .glazing__container{
+        padding: 80px 15px 10px
+    }
+    .glazingTabs-card{
+        padding: 45px 25px 20px;
+    }
+    .price-container p{
+        width:150px;
+        white-space:inherit;
+    };
+
+    // decoration
+    .decorationTabs__wrapper{
+        // height:970px ;
+        height:1020px ;
+    }
+    .decorationTabs__img{
+        margin-right: 40px;
+    }
+    .decorationTabs__content_wrapper{
+        gap: 50px;
+    }
+    .decorationTabs__content_form-container{
+        top: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+    .decorationTabs__content_form-container form{
+        width: 455px;
+    }
+    // galery
+    .works__container {
+        padding: 50px 15px 80px;
+    }
+    .works__galery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+//    contacts
+.map{
+    width:455px ;
+}
+.address{
+    // margin-left: 30px;
+    width: 455px;
+    // width: 300px;
+    white-space: normal;
+}
+.address p{
+    width: 100%;
+}
+// footer
+.footer__container{
+    padding: 40px 0;
+} 
 }
 
 // Medium Devices Desktop
 @media only screen and (max-width:992px){
+
+    .container{
+        width: 750px;
+    }
+    // header
+    .header__logo{
+        flex-direction: column;
+        align-items: flex-start
+    };
+    .logo-title{
+        // text-align: center;
+        margin: 0 ;
+    }
+    .workind-time_description p{
+        font-size: 1.3rem;
+    }
+    .workind-time_description span{
+        font-size: 1.6rem;
+    }
+    .phone-number{
+        font-size: 1.4rem;
+    }
+    .order-call{
+        font-size: 1.15rem;
+    }
+
+    // main
+    .main{
+        height: fit-content;
+        padding:70px 0 ;
+        background: url("./img/main/bg.png") ;
+    background-position: 13%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .container__main{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main__content{
+        align-items: center;
+    }
+    .main__info{
+        text-align: center;
+    }
+    .main__info_options{
+        margin: 50px 0 60px;
+        gap: 70px;
+    }
+
+    // slider
     .slider__carousel li{
         width: calc(100%/3);
     };
+    // glazing tabs
+    .glazingTabs__wrapper{
+        flex-direction: column;
+        // align-items: center;
+    }
+    .glazingTabs-card{
+        max-width: 1000px;
+        margin-bottom: 50px;
+    }
+    .glazingTabs-card__img-wrapper img{
+        width: 600px;
+    }
+    .glazingTabs-card__description-list{
+        padding: 0 100px;
+    }
+    .glazingTabs-card__price{
+        justify-content: center;
+    }
+    // decoration carousel
     .decoration__carousel li{
         width: calc(100%/2);
     }  
+
+    // decoration tabs
+    .decorationTabs__wrapper{
+        height:1580px ;
+    }
+.decorationTabs__card {
+
+    flex-direction: column;
+    align-items: center;
+   
+}
+.decorationTabs__img{
+    margin: 0;
+    min-width: 370px;
+    height: auto;
+}
+    .decorationTabs__content_form-container{
+        top: 1050px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+
+    // galery
+    .works__galery{
+        grid-template-columns: 380px 380px;
+        justify-items: center;
+        justify-content: center;
+    }
+
+// payment section
+.payment__row{
+    justify-content: center;
+    gap: 40px;
+}
+.payment__item a{
+    display: flex;
+    flex-direction: column;
+}
+.payment__item a span{
+    width: 200px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+
+// sale section
+.sale{
+  background-position: right;
+background-size: cover;
+padding: 50px 0;
+}
+.sale__container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.sale__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.sale__info h2{
+    margin-bottom: 30px;
+
+}
+.sale__info p{
+    // text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+    // guarantie
+    .guarantee__block{
+       display: grid;
+       grid-template-columns: 350px 350px;
+       justify-content: center;
+       justify-items: center
+        
+    }
+// contacts
+
+.contacts__map-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.map{
+    width: 100%;
+}
+.address{
+    width: 100%;
+    margin-top: 30px;
+}
+
+// feedback
+.fedback__container {
+    flex-direction: column;
+    align-items: center
+};
+.fedback__container p{
+    margin: 0 0 20px ;
+}
+// footer
+.footer__contacts{
+    // transform: translateX(-120px);
+}
 }
 
 //Small Devices Tablets

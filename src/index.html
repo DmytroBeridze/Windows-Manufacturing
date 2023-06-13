@@ -571,19 +571,25 @@
     <!-- -----------------------payment section -->
     <section class="payment">
       <div class="container">
-        <h2 class="payment__haeder">Ви можете оплатити наші послуги:</h2>
+        <h2 class="payment__header">Ви можете оплатити наші послуги:</h2>
         <ul class="payment__row">
           <li class="payment__item">
-            <img src="./img/payment/wallet.png" alt="" />
-            <span>Готівкою</span>
+            <a href="./cash.html">
+              <img src="./img/payment/wallet.png" alt="pay" />
+              <span>Готівкою</span>
+            </a>
           </li>
           <li class="payment__item">
-            <img src="./img/payment/credit-card.png" alt="" />
-            <span>Банківською карткою</span>
+            <a href="./card.html">
+              <img src="./img/payment/credit-card.png" alt="pay" />
+              <span>Банківською карткою</span>
+            </a>
           </li>
           <li class="payment__item">
-            <img src="./img/payment/museum.png" alt="" />
-            <span>Безготівковий розрахунок</span>
+            <a href="./cashless.html">
+              <img src="./img/payment/museum.png" alt="pay" />
+              <span>Безготівковий розрахунок</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -598,20 +604,20 @@
           <div class="sale__timer">
             <div class="sale__timer_header">ДО ЗАВЕРШЕННЯ АКЦІЇ:</div>
             <div class="sale__timer_count">
-              <div id="day" class="count-element">
-                <div>00</div>
+              <div class="count-element">
+                <div id="day">00</div>
                 <span class="title">Днів</span>
               </div>
-              <div id="hour" class="count-element">
-                <div>00</div>
+              <div class="count-element">
+                <div id="hour">00</div>
                 <span class="title">Годин</span>
               </div>
-              <div id="minute" class="count-element">
-                <div>00</div>
+              <div class="count-element">
+                <div id="minute">00</div>
                 <span class="title">Хвилин</span>
               </div>
-              <div id="second" class="count-element">
-                <div>00</div>
+              <div class="count-element">
+                <div id="second">00</div>
                 <span class="title">Секунд</span>
               </div>
             </div>
@@ -620,6 +626,63 @@
         <div class="sale-window__container"></div>
       </div>
     </section>
+    <section class="contacts">
+      <!-- <div class="contacts__container container"> -->
+      <div class="container contacts__container">
+        <div class="contacts__header">
+          <h2>Як нас знайти</h2>
+          <div class="glazing__header_sub"></div>
+        </div>
+        <div class="contacts__map-wrapper">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d279.8429148187159!2d34.55186301067732!3d49.58760035659171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d82fd7a56aafa1%3A0x9435e36ede37c121!2sFontan!5e0!3m2!1sru!2sua!4v1686245179805!5m2!1sru!2sua"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <div class="address">
+            <h3>Юридична адреса:</h3>
+            <p>ООО Fontan вулиця 1100-річчя Полтави, 2, Полтава</p>
+            <h3>Фактична адреса:</h3>
+            <p>
+              ООО Fontan вулиця 1100-річчя Полтави, 2, Полтава, Полтавська
+              область, 36000
+            </p>
+            <h3>Телефон:</h3>
+            <p>+8 (050) 650-30-71 (багатоканальний)</p>
+            <h3>E-mail:</h3>
+            <p><a href="#">info@startpage.ua</a></p>
+            <h3>Режим роботи:</h3>
+            <p>9:00 – 18:00 без вихідних</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -----------------feedback -->
+    <section class="fedback">
+      <div class="fedback__container container">
+        <p>Залишились питання?</p>
+        <a href="#">Запитайте у нашого фахівця!</a>
+      </div>
+    </section>
+    <!-- ----------------footer -->
+    <footer>
+      <div class="footer__container container">
+        <div class="footer__contacts-wrapper">
+          <div class="footer__logo">
+            <img src="./img/header/logo.png" alt="footerlogo" />
+          </div>
+          <div class="footer__contacts">
+            <p>+8 (050) 650-30-71</p>
+            <a href="#">info@startpage.ua</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- script -->
     <script src="./main.js"></script>
   </body>

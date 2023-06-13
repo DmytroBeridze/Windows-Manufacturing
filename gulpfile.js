@@ -20,10 +20,19 @@ const devApi = () => {
     .pipe(browserSync.stream());
 };
 
+// ----------------------components
+// const devComponents = () => {
+//   return src("./src/api/**")
+//     .pipe(dest("./dist/api"))
+//     .pipe(browserSync.stream());
+// };
+
 // -----------------------html
 const devHtml = () => {
   return (
-    src("./src/index.html")
+    // src("./src/index.html")
+    // ! Для перенесення всіх HTML до dist
+    src("./src/*.html")
       // для подключения модулей html @@include("./test.html")
       .pipe(
         fileinclude({
@@ -125,6 +134,7 @@ const browsersync = () => {
     // port: 4000,
   });
   watch("./src/index.html", devHtml);
+  // watch("./src/*.html", devHtml);
   watch("./src/assets/scss/**/*.scss", devStyles);
   watch("./src/assets/js/**/*.js", scripts);
   watch("./src/assets/img/**", devImg);
@@ -147,7 +157,9 @@ exports.scripts = scripts;
 
 // -----------------------------html
 const htmlBuild = () => {
-  return src("./src/index.html")
+  // return src("./src/index.html")
+  // ! Для перенесення всіх HTML до dist
+  return src("./src/*.html")
     .pipe(
       fileinclude({
         prefix: "@@",

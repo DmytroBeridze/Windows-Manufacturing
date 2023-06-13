@@ -6,6 +6,7 @@ import slider from "./_slider";
 import glazing_tabs from "./_glazing_tabs";
 import orderCalculator from "./orderCalculator";
 import galery from "./galery";
+import timer from "./timer";
 import orderDecoration from "./orderDecoration";
 window.addEventListener("DOMContentLoaded", () => {
   main_icons_module();
@@ -32,6 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
   orderCalculator(modalState);
   form(modalState, decorationState);
   galery();
+  timer("2023-06-08");
 
   // orderCalculator(windowForm, "click", "window-form");
 });
