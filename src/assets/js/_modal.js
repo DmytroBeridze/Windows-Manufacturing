@@ -1,9 +1,13 @@
+import scrollWidthCalc from "./scrollWidthCalc";
+
 const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
   const modalWindowToggle = () => {
     const button = document.querySelectorAll(triggerSelector),
       modalWindow = document.querySelector(targetSelector),
       closeButton = document.querySelectorAll(closeButtonSelector),
-      popupContainers = document.querySelectorAll(".popup__container_style");
+      popupContainers = document.querySelectorAll(".popup__container_style"),
+      clientWidth = document.documentElement.clientWidth,
+      scrollWidth = scrollWidthCalc();
 
     //---------------- open fnc
     const open = () => {
@@ -12,11 +16,17 @@ const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
       // ----//-
       modalWindow.style.display = "flex";
       document.body.style.overflow = "hidden";
+
+      // add margin to body when open popup
+      document.body.style.marginRight = `${scrollWidth}px`;
     };
     // -----------------close fnc
     const close = () => {
       modalWindow.style.display = "none";
       document.body.style.overflow = "auto";
+
+      // remove margin to body when open popup
+      document.body.style.marginRight = `0px`;
     };
 
     // button open
@@ -35,6 +45,10 @@ const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
       ) {
         close();
       }
+      // close window on screen size <= 576
+      if (clientWidth <= 576) {
+        close();
+      }
     });
 
     closeButton.forEach((elem) => {
@@ -42,33 +56,36 @@ const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
         close();
       });
     });
-  };
-  modalWindowToggle();
 
-  // modalWindowToggle(
-  //   ".header__button",
-  //   ".popup__container",
-  //   ".popup__close-button"
-  // );
-  // modalWindowToggle(
-  //   ".order-call",
-  //   ".callback-popup__container",
-  //   ".popup__close-button"
-  // );
-  // modalWindowToggle(
-  //   ".calculation__button",
-  //   ".callback-popup__container",
-  //   ".popup__close-button"
-  // );
-  // modalWindowToggle(
-  //   ".button-size",
-  //   ".glazingtype-popup__container",
-  //   ".popup__close-button"
-  // );
-  // modalWindowToggle(
-  //   ".glazingtype-button",
-  //   ".calculation-order__container",
-  //   ".popup__close-button"
-  // );
+    //delete close button max-width: 576px reload
+    const deleteCloseButton = (clientWidth) => {
+      if (clientWidth <= 576) {
+        closeButton.forEach((elem) => (elem.style.display = "none"));
+      } else {
+        closeButton.forEach((elem) => (elem.style.display = "block"));
+      }
+    };
+
+    deleteCloseButton(clientWidth);
+    //delete close button max-width: 576px resize
+    window.addEventListener("resize", () => {
+      let clientWidth = document.documentElement.clientWidth;
+      deleteCloseButton(clientWidth);
+    });
+
+    // //scrollWidthCalculation
+    // function scrollWidthCalc() {
+    //   const element = document.createElement("div");
+    //   element.style.width = "50px";
+    //   element.style.height = "50px";
+    //   element.style.overflowY = "scroll";
+    //   document.body.append(element);
+    //   const width = element.offsetWidth - element.clientWidth;
+    //   element.remove();
+    //   return width;
+    // }
+  };
+
+  modalWindowToggle();
 };
 export default modal;

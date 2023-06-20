@@ -7,18 +7,25 @@
     padding: 0;
 }
 
+
 html{
     
     font-size: 10px;
+    // width: 100%;
+    // max-width: 100%;
+    // overflow-x: hidden;
 }
 
 body{
     color: var( --blackTxt);
+    // width: 100%;
+    // max-width: 100%;
 }
 // -----------------------Header
 .header{
+    width: 100%;
     padding: 20px 0;
-    // background-color: antiquewhite;
+    max-width: 100%;
 }
 .container{
     width: 100%;
@@ -1175,6 +1182,12 @@ text-align: center
     color: var(--blue);
     text-align: end;
 }
+
+.test{
+    display: flex;
+    gap: 40px;
+}
+
 
 
 

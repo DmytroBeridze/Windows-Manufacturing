@@ -1,12 +1,15 @@
+import scrollWidthCalc from "./scrollWidthCalc";
+
 const galery = () => {
   const galeryContainer = document.querySelector(".works__container"),
     galery = document.querySelector(".works__galery"),
     popupContainer = document.createElement("div"),
     bigImg = document.createElement("img"),
-    URL = "./api/works_galery.json";
+    URL = "./api/works_galery.json",
+    scrollWidth = scrollWidthCalc();
 
   popupContainer.classList.add("popup__container_style");
-  popupContainer.style.display = "none";
+  // popupContainer.style.display = "none";
   bigImg.classList.add("works__galery_bigImg");
   popupContainer.appendChild(bigImg);
   galeryContainer.appendChild(popupContainer);
@@ -36,11 +39,17 @@ const galery = () => {
           `./img/our_works/big_img/${path[path.length - 1]}`
         );
         popupContainer.classList.add("works-faded");
+
+        // add margin to body when open popup
+        document.body.style.marginRight = `${scrollWidth}px`;
       }
 
       if (e.target.className.includes("popup__container_style")) {
         popupContainer.style.display = "none";
         document.body.style.overflow = "";
+
+        // remove margin to body when open popup
+        document.body.style.marginRight = `0px`;
       }
     });
   });
