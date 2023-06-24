@@ -1,15 +1,31 @@
 [
         {
-            "type":"wood",
-            "title":"Холодне",
-            "img":"./img/glazing_section/wood/img_cold.png",
-            "structure_thickness":"Конструктивна товщина 42-58 мм.",
-            "glazing":"Скління: поліроване скло (товщиною 4 - 5 мм)",
-            "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
-            "soundproofing":"Звукоізоляція: 20-27 дб",
-            "price":"2600 грн.кв.м."
+           
+
+            "ua":{
+                "type":"wood",
+                "title":"Холодне",
+                "img":"./img/glazing_section/wood/img_cold.png",
+                "structure_thickness":"Конструктивна товщина 42-58 мм.",
+                "glazing":"Скління: поліроване скло (товщиною 4 - 5 мм)",
+                "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
+                "soundproofing":"Звукоізоляція: 20-27 дб",
+                "price":"2600 грн.кв.м."
+            },
+            "en":{
+                "type":"wood",
+                "title":"Cold",
+                "img":"./img/glazing_section/wood/img_cold.png",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"2600 UAH.sq.m"
+            }
+
         },
         {
+            "ua":{
             "type":"wood",
             "title":"Тепле",
             "img":"./img/glazing_section/wood/img_warm.png",
@@ -18,8 +34,20 @@
             "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: до 5 класу",
             "price":"4000 грн.кв.м."
+            },
+            "en":{
+                "type":"wood",
+                "title":"Warm",
+                "img":"./img/glazing_section/wood/img_warm.png",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,63 - 1,05 м2* С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"4000 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"aluminum",
             "title":"Холодне",
             "img":"./img/glazing_section/aluminum/cold.jpg",
@@ -28,8 +56,20 @@
             "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: 20-27 дб",
             "price":"4000 грн.кв.м."
+            },
+            "en":{
+                "type":"aluminum",
+                "title":"Cold",
+                "img":"./img/glazing_section/aluminum/cold.jpg",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"4000 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"aluminum",
             "title":"Тепле",
             "img":"./img/glazing_section/aluminum/warm.jpg",
@@ -38,8 +78,20 @@
             "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: до 5 класу",
             "price":"8000 грн.кв.м."
+            },
+            "en":{
+                "type":"aluminum",
+                "title":"Warm",
+                "img":"./img/glazing_section/aluminum/warm.jpg",
+                "structure_thickness":"Constructive thickness 60-68 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,63 - 1,05 м2 * С/vt",
+                "soundproofing":"Sound insulation: 15-20 db",
+                "price":"8000 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"plastic",
             "title":"Тепле",
             "img":"./img/glazing_section/plastic/warm.jpg",
@@ -48,8 +100,20 @@
             "thermal_insulation":"Теплоізоляція: 0,63-1,05 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: до 5 класа",
             "price":"5500 грн.кв.м."
+            },
+            "en":{
+                "type":"plastic",
+                "title":"Warm",
+                "img":"./img/glazing_section/plastic/warm.jpg",
+                "structure_thickness":"Constructive thickness 58-70 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation:  0,63-1,05 м2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"5500 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"french",
             "title":"Пластик",
             "img":"./img/glazing_section/french/plastic.jpg",
@@ -58,8 +122,20 @@
             "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: до 5 класу",
             "price":"5500 грн.кв.м."
+            },
+            "en":{
+                "type":"french",
+                "title":"Plastic",
+                "img":"./img/glazing_section/french/plastic.jpg",
+                "structure_thickness":"Constructive thickness 58-70 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,63 - 1,05 м2 * С/vt",
+                "soundproofing":"Sound insulation: to 5th grade",
+                "price":"2600 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"french",
             "title":"Алюміній",
             "img":"./img/glazing_section/french/aluminum.jpg",
@@ -68,8 +144,20 @@
             "thermal_insulation":"Теплоізоляція: 0,63 - 1,05 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: до 5 класу",
             "price":"8000 грн.кв.м."
+            },
+            "en":{
+                "type":"french",
+                "title":"Aluminum",
+                "img":"./img/glazing_section/french/aluminum.jpg",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"2600 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"rise",
             "title":"Алюміній",
             "img":"./img/glazing_section/rise/aluminum.jpg",
@@ -78,8 +166,20 @@
             "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: 20-27 дб",
             "price":"4000 грн.кв.м."
+            },
+            "en":{
+                "type":"rise",
+                "title":"Aluminum",
+                "img":"./img/glazing_section/rise/aluminum.jpg",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"2600 UAH.sq.m"
+            }
         },
         {
+            "ua":{
             "type":"rise",
             "title":"Дерево",
             "img":"./img/glazing_section/rise/tree.jpg",
@@ -88,5 +188,16 @@
             "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
             "soundproofing":"Звукоізоляція: 20-27 дб",
             "price":"8000 грн.кв.м."
+            },
+              "en":{
+                "type":"rise",
+                "title":"Wood",
+                "img":"./img/glazing_section/wood/img_cold.png",
+                "structure_thickness":"Constructive thickness 42-58 mm.",
+                "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
+                "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",
+                "soundproofing":"Sound insulation: 20-27 db",
+                "price":"2600 UAH.sq.m"
+            }
         }
 ]

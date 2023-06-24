@@ -87,6 +87,8 @@ body{
 .workind-time_description p{
     font-family: "OpenSans-Regular_400";
     font-size: 1.5rem;
+    word-wrap: nowrap;
+    // width: 100px;
 }
 .workind-time_description span{
 

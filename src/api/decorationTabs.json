@@ -1,142 +1,280 @@
 [
+
 {
 "name":"Interior_decoration",
 "img":"./img/decoration_section/1/decoration_img.png",
+"ua":{
 
-"descriptionCard":[
- { "descName": "lining",
-"descImg":"./img/decoration_section/1/lining.png",
-"title":"Вагонка",
-"price":"600 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"plastic",
-"descImg":"./img/decoration_section/1/plastic.png",
-"title":"Пластикова вагонка",
-"price":"750 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"pvh",
-"descImg":"./img/decoration_section/1/pvh.png",
-"title":"ПВХ-панелі",
-"price":"800 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"laminate",
-"descImg":"./img/decoration_section/1/laminate.png",
-"title":"Настил підлоги з ламінату",
-"price":"1250 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"tree",
-"descImg":"./img/decoration_section/1/tree.png",
-"title":"Настил підлоги з дерева",
-"price":"1650 грн. кв.м.",
-"matherial":"з матеріалом"}
-]
+    "descriptionCard":[
+     { "descName": "lining",
+    "descImg":"./img/decoration_section/1/lining.png",
+    "title":"Вагонка",
+    "price":"600 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    { "descName":"plastic",
+    "descImg":"./img/decoration_section/1/plastic.png",
+    "title":"Пластикова вагонка",
+    "price":"750 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    { "descName":"pvh",
+    "descImg":"./img/decoration_section/1/pvh.png",
+    "title":"ПВХ-панелі",
+    "price":"800 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    {"descName":"laminate",
+    "descImg":"./img/decoration_section/1/laminate.png",
+    "title":"Настил підлоги з ламінату",
+    "price":"1250 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    {"descName":"tree",
+    "descImg":"./img/decoration_section/1/tree.png",
+    "title":"Настил підлоги з дерева",
+    "price":"1650 грн. кв.м.",
+    "matherial":"з матеріалом"}
+    ]
 },
+"en":{
+
+    "descriptionCard":[
+     { "descName": "lining",
+    "descImg":"./img/decoration_section/1/lining.png",
+    "title":"Lining",
+    "price":"600 UAH.sq.m",
+    "matherial":"with material"},
+    
+    { "descName":"plastic",
+    "descImg":"./img/decoration_section/1/plastic.png",
+    "title":"Plastic lining",
+    "price":"750 UAH.sq.m",
+    "matherial":"with material"},
+    
+    { "descName":"pvh",
+    "descImg":"./img/decoration_section/1/pvh.png",
+    "title":"PVC panels",
+    "price":"800 UAH.sq.m",
+    "matherial":"with material"},
+    
+    {"descName":"laminate",
+    "descImg":"./img/decoration_section/1/laminate.png",
+    "title":"Laminate flooring",
+    "price":"1250 UAH.sq.m",
+    "matherial":"with material"},
+    
+    {"descName":"tree",
+    "descImg":"./img/decoration_section/1/tree.png",
+    "title":"Wood flooring",
+    "price":"1650 UAH.sq.m",
+    "matherial":"with material"}
+    ]
+}
+},
+
 
 {
 "name":"Exterior_decoration",
 "img":"./img/decoration_section/2/decoration2_img.png",
-
-"descriptionCard":[
- { "descName": "metal",
-"descImg":"./img/decoration_section/2/metal.png",
-"title":"Металевий сайдинг",
-"price":"600 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"plastic",
-"descImg":"./img/decoration_section/2/plastic.png",
-"title":"Пластикова вагонка2",
-"price":"750 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"profnastil",
-"descImg":"./img/decoration_section/2/profnastil.png",
-"title":"Профнастил",
-"price":"800 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"tree",
-"descImg":"./img/decoration_section/2/tree.png",
-"title":"Дерев'яна вагонка",
-"price":"1250 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"vinil",
-"descImg":"./img/decoration_section/2/vinil.png",
-"title":"Вініловий сайдинг",
-"price":"1650 грн. кв.м.",
-"matherial":"з матеріалом"}
-]
+"ua":{
+    "descriptionCard":[
+     { "descName": "metal",
+    "descImg":"./img/decoration_section/2/metal.png",
+    "title":"Металевий сайдинг",
+    "price":"600 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    { "descName":"plastic",
+    "descImg":"./img/decoration_section/2/plastic.png",
+    "title":"Пластикова вагонка2",
+    "price":"750 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    { "descName":"profnastil",
+    "descImg":"./img/decoration_section/2/profnastil.png",
+    "title":"Профнастил",
+    "price":"800 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    {"descName":"tree",
+    "descImg":"./img/decoration_section/2/tree.png",
+    "title":"Дерев'яна вагонка",
+    "price":"1250 грн. кв.м.",
+    "matherial":"з матеріалом"},
+    
+    {"descName":"vinil",
+    "descImg":"./img/decoration_section/2/vinil.png",
+    "title":"Вініловий сайдинг",
+    "price":"1650 грн. кв.м.",
+    "matherial":"з матеріалом"}
+    ]
 },
+"en":{
+    "descriptionCard":[
+     { "descName": "metal",
+    "descImg":"./img/decoration_section/2/metal.png",
+    "title":"Metal siding",
+    "price":"600 UAH.sq.m",
+    "matherial":"with material"},
+    
+    { "descName":"plastic",
+    "descImg":"./img/decoration_section/2/plastic.png",
+    "title":"Plastic lining2",
+    "price":"750 UAH.sq.m",
+    "matherial":"with material"},
+    
+    { "descName":"profnastil",
+    "descImg":"./img/decoration_section/2/profnastil.png",
+    "title":"Professional flooring",
+    "price":"800 UAH.sq.m",
+    "matherial":"with material"},
+    
+    {"descName":"tree",
+    "descImg":"./img/decoration_section/2/tree.png",
+    "title":"Wooden lining",
+    "price":"1250 UAH.sq.m",
+    "matherial":"with material"},
+    
+    {"descName":"vinil",
+    "descImg":"./img/decoration_section/2/vinil.png",
+    "title":"Vinyl siding",
+    "price":"1650 UAH.sq.m",
+    "matherial":"with material"}
+    ]
+}
+},
+
+
 {
 "name":"Remote_glazing",
 "img":"./img/decoration_section/3/decoration3_img.jpg",
 
-"descriptionCard":[
- { "descName": "aluminum",
-"descImg":"./img/decoration_section/3/aluminum.png",
-"title":"Алюмінієвий профіль",
-"price":"600 грн. кв.м.",
-"matherial":"з матеріалом"},
+"ua":{ 
+     "descriptionCard":[
+    { "descName": "aluminum",
+   "descImg":"./img/decoration_section/3/aluminum.png",
+   "title":"Алюмінієвий профіль",
+   "price":"600 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   { "descName":"bezram",
+   "descImg":"./img/decoration_section/3/bezram.png",
+   "title":"Безрамне скління ",
+   "price":"750 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   { "descName":"pvh",
+   "descImg":"./img/decoration_section/3/pvh.png",
+   "title":"ПВХ профіль",
+   "price":"800 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   {"descName":"tree",
+   "descImg":"./img/decoration_section/3/tree.png",
+   "title":"Дерев'яний профіль",
+   "price":"1250 грн. кв.м.",
+   "matherial":"з матеріалом"}
+   ] },
 
-{ "descName":"bezram",
-"descImg":"./img/decoration_section/3/bezram.png",
-"title":"Безрамне скління ",
-"price":"750 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"pvh",
-"descImg":"./img/decoration_section/3/pvh.png",
-"title":"ПВХ профіль",
-"price":"800 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"tree",
-"descImg":"./img/decoration_section/3/tree.png",
-"title":"Дерев'яний профіль",
-"price":"1250 грн. кв.м.",
-"matherial":"з матеріалом"}
-]
+   "en":{  "descriptionCard":[
+    { "descName": "aluminum",
+   "descImg":"./img/decoration_section/3/aluminum.png",
+   "title":"Aluminum profile",
+   "price":"600 UAH.sq.m",
+   "matherial":"with material"},
+   
+   { "descName":"bezram",
+   "descImg":"./img/decoration_section/3/bezram.png",
+   "title":"Frameless glazing",
+   "price":"750 UAH.sq.m",
+   "matherial":"with material"},
+   
+   { "descName":"pvh",
+   "descImg":"./img/decoration_section/3/pvh.png",
+   "title":"PVC profile",
+   "price":"800 UAH.sq.m",
+   "matherial":"with material"},
+   
+   {"descName":"tree",
+   "descImg":"./img/decoration_section/3/tree.png",
+   "title":"Wooden profile",
+   "price":"1250 UAH.sq.m",
+   "matherial":"with material"}
+   ]  }
 },
+
+
 {
 "name":"Roof_to_balcony",
 "img":"./img/decoration_section/4/decoration4_img.png",
+"ua":{ 
+    "descriptionCard":[
+    { "descName": "gofrolist",
+   "descImg":"./img/decoration_section/4/gofrolist.png",
+   "title":"Гофраліст",
+   "price":"600 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   { "descName":"metallocherepitsa",
+   "descImg":"./img/decoration_section/4/metallocherepitsa.png",
+   "title":"Mеталочерепиця",
+   "price":"750 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   { "descName":"ondulin",
+   "descImg":"./img/decoration_section/4/ondulin.png",
+   "title":"Ондулін",
+   "price":"800 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   {"descName":"polikarbonat",
+   "descImg":"./img/decoration_section/4/polikarbonat.png",
+   "title":"Полікарбонат",
+   "price":"1250 грн. кв.м.",
+   "matherial":"з матеріалом"},
+   
+   {"descName":"steklopaket",
+   "descImg":"./img/decoration_section/4/steklopaket.png",
+   "title":"Склопакет",
+   "price":"1650 грн. кв.м.",
+   "matherial":"з матеріалом"}
+   ]
+},
+"en":{ 
+    "descriptionCard":[
+    { "descName": "gofrolist",
+   "descImg":"./img/decoration_section/4/gofrolist.png",
+   "title":"Corrugated sheet",
+   "price":"600 UAH.sq.m",
+   "matherial":"with material"},
+   
+   { "descName":"metallocherepitsa",
+   "descImg":"./img/decoration_section/4/metallocherepitsa.png",
+   "title":"Metal tile",
+   "price":"750 UAH.sq.m",
+   "matherial":"with material"},
+   
+   { "descName":"ondulin",
+   "descImg":"./img/decoration_section/4/ondulin.png",
+   "title":"Ondulin",
+   "price":"800 UAH.sq.m",
+   "matherial":"with material"},
+   
+   {"descName":"polikarbonat",
+   "descImg":"./img/decoration_section/4/polikarbonat.png",
+   "title":"Polycarbonate",
+   "price":"1250 UAH.sq.m",
+   "matherial":"with material"},
+   
+   {"descName":"steklopaket",
+   "descImg":"./img/decoration_section/4/steklopaket.png",
+   "title":"Double glazing",
+   "price":"1650 UAH.sq.m",
+   "matherial":"with material"}
+   ]
+}
 
-"descriptionCard":[
- { "descName": "gofrolist",
-"descImg":"./img/decoration_section/4/gofrolist.png",
-"title":"Гофраліст",
-"price":"600 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"metallocherepitsa",
-"descImg":"./img/decoration_section/4/metallocherepitsa.png",
-"title":"Mеталочерепиця",
-"price":"750 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{ "descName":"ondulin",
-"descImg":"./img/decoration_section/4/ondulin.png",
-"title":"Ондулін",
-"price":"800 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"polikarbonat",
-"descImg":"./img/decoration_section/4/polikarbonat.png",
-"title":"Полікарбонат",
-"price":"1250 грн. кв.м.",
-"matherial":"з матеріалом"},
-
-{"descName":"steklopaket",
-"descImg":"./img/decoration_section/4/steklopaket.png",
-"title":"Склопакет",
-"price":"1650 грн. кв.м.",
-"matherial":"з матеріалом"}
-]
 }
 
 ]
