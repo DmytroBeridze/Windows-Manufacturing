@@ -1,17 +1,21 @@
 const staticForm = () => {
   let lang = location.hash.substring(1);
+  const langSelect = document.querySelector(".header__language");
+  // let lang = langSelect.value;
   const titles = [
     {
       ua: {
         header: "Запишіться сьогодні на",
         span: "БЕЗКОШТОВНИЙ ЗАМІР",
         button: "викликати замірника",
+        info: "Ваші дані конфіденційні",
         close: `<div class="popup__close-button" style="display:none;"></div>`,
       },
       en: {
         header: "Sign up today at",
         span: "FREE MEASUREMENT",
         button: "call the tester",
+        info: "Your data is confidential",
         close: `<div class="popup__close-button" style="display:none;"></div>`,
       },
     },
@@ -20,6 +24,7 @@ const staticForm = () => {
         header: "Запишіться сьогодні на",
         span: "БЕЗКОШТОВНИЙ ЗАМІР",
         button: "викликати замірника",
+        info: "Ваші дані конфіденційні",
         close: `<div class="popup__close-button">
           <svg width="35px" height="35px" viewBox="0 0 35 35">
             <path
@@ -32,6 +37,7 @@ const staticForm = () => {
         header: "Sign up today at",
         span: "FREE MEASUREMENT",
         button: "call the tester",
+        info: "Your data is confidential",
         close: `<div class="popup__close-button">
           <svg width="35px" height="35px" viewBox="0 0 35 35">
             <path
@@ -46,6 +52,7 @@ const staticForm = () => {
         header: "Введіть ваші дані",
         span: "та натисніть замовити дзвінок",
         button: "замовити дзвінок",
+        info: "Ваші дані конфіденційні",
         close: `<div class="popup__close-button">
         <svg width="35px" height="35px" viewBox="0 0 35 35">
           <path
@@ -58,6 +65,7 @@ const staticForm = () => {
         header: "Enter your details",
         span: "and click order call",
         button: "order a call",
+        info: "Your data is confidential",
         close: `<div class="popup__close-button">
         <svg width="35px" height="35px" viewBox="0 0 35 35">
           <path
@@ -72,6 +80,7 @@ const staticForm = () => {
         header: "Дякуємо за звернення!",
         span: "Залиште ваші дані",
         button: "розрахувати вартість",
+        info: "Ваші дані конфіденційні",
         close: `<div class="popup__close-button">
         <svg width="35px" height="35px" viewBox="0 0 35 35">
           <path
@@ -84,6 +93,7 @@ const staticForm = () => {
         header: "Thank you for your request!",
         span: "Leave your details",
         button: "calculate the cost",
+        info: "Your data is confidential",
         close: `<div class="popup__close-button">
         <svg width="35px" height="35px" viewBox="0 0 35 35">
           <path
@@ -96,7 +106,6 @@ const staticForm = () => {
   ];
 
   const renderForm = (containerSelector, index) => {
-    console.log(titles[index][lang]);
     const container = document.querySelector(containerSelector),
       windowForm = `${titles[index][lang].close}
      <form class="modal-window">
@@ -109,14 +118,14 @@ const staticForm = () => {
   name="user_name"
   class="modal__input"
   type="text"
-  placeholder="Введіть ваше ім'я"
+  ${namePlaceholderTranslate(lang)}
   required
 />
 <input
   name="user_phone"
   class="modal__input"
   type="text"
-  placeholder="Введіть телефон"
+  ${phonePlaceholderTranslate(lang)}
   required
 />
 <input
@@ -126,10 +135,23 @@ const staticForm = () => {
   value="${titles[index][lang].button}"
 />
 
-<div class="modal__info">Ваші дані конфіденційні</div>
+<div class="modal__info">${titles[index][lang].info}</div>
 </form>`;
 
     container.innerHTML = windowForm;
+
+    //  translate placeholders
+    function namePlaceholderTranslate(lang) {
+      return lang == "ua"
+        ? 'placeholder="Введіть ваше ім\'я"'
+        : 'placeholder="Enter your name"';
+    }
+
+    function phonePlaceholderTranslate(lang) {
+      return lang == "ua"
+        ? 'placeholder="Введіть телефон"'
+        : 'placeholder="Enter phone"';
+    }
   };
 
   renderForm(".modal-window__container", 0);

@@ -10,6 +10,8 @@ import timer from "./timer";
 import translate from "./translate";
 
 window.addEventListener("DOMContentLoaded", () => {
+  translate();
+
   main_icons_module();
   staticForm();
 
@@ -35,8 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
   form(modalState, decorationState);
   galery();
   timer("2023-11-09");
-
-  // translate();
 
   // orderCalculator(windowForm, "click", "window-form");
 });

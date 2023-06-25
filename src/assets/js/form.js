@@ -4,18 +4,34 @@ const form = (modalState, decorationState) => {
     nameInput = document.querySelectorAll("[name=user_name]"),
     phoneInput = document.querySelectorAll("[name=user_phone]");
   // --------------------------status mesage
+  let lang = location.hash.substring(1);
+
   const messageContainer = document.createElement("div");
   messageContainer.classList.add("status");
   const stausMessage = {
-    load: "Йде відправка даних",
-    success: "Ми скоро зв'яжемося з вами",
-    fail: "Щось пішло не так",
+    load: {
+      ua: "Йде відправка даних",
+      en: "Sending data",
+    },
+    success: {
+      ua: "Ми скоро зв'яжемося з вами",
+      en: "We will contact you soon",
+    },
+    fail: {
+      ua: "Щось пішло не так",
+      en: "Something went wrong",
+    },
   };
+  // const stausMessage = {
+  //   load: "Йде відправка даних",
+  //   success: "Ми скоро зв'яжемося з вами",
+  //   fail: "Щось пішло не так",
+  // };
 
   // ------------------------fetch
   const formRequest = async (url, data) => {
     // staus message
-    messageContainer.textContent = stausMessage.load;
+    messageContainer.textContent = stausMessage.load[lang];
     const request = await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
@@ -61,7 +77,6 @@ const form = (modalState, decorationState) => {
           formData.set(key, decorationState[key]);
         }
       }
-
       let userData = Object.fromEntries(formData);
       formRequest(URL, userData)
         .then(() => {
@@ -76,11 +91,11 @@ const form = (modalState, decorationState) => {
           });
 
           // staus message
-          messageContainer.textContent = stausMessage.success;
+          messageContainer.textContent = stausMessage.success[lang];
         })
         .catch(() => {
           // status message
-          messageContainer.textContent = stausMessage.fail;
+          messageContainer.textContent = stausMessage.fail[lang];
         })
         .finally(() => {
           // remove status message div

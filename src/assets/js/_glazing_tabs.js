@@ -11,6 +11,8 @@ const glazing_tabs = (decorationState) => {
 
     // hash for language change
     let lang = location.hash.substring(1);
+    // const langSelect = document.querySelector(".header__language");
+    // let lang = langSelect.value;
 
     const glazingFetch = async () => {
       const request = await fetch(URL);
