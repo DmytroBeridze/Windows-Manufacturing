@@ -1,8 +1,6 @@
 import tabs_switching_module from "./_tabs_switching_module";
 import modal from "./_modal.js";
 import orderDecoration from "./orderDecoration";
-import translate from "./translate";
-import form from "./form";
 
 const glazing_tabs = (decorationState) => {
   const tabsRender = (containerSelector, URL, activeTabSelector) => {
@@ -11,8 +9,18 @@ const glazing_tabs = (decorationState) => {
 
     // hash for language change
     let lang = location.hash.substring(1);
-    // const langSelect = document.querySelector(".header__language");
-    // let lang = langSelect.value;
+
+    // translate
+    const translate = {
+      subtitle: {
+        ua: "під ключ із встановленням",
+        en: "turnkey installation",
+      },
+      buttonValue: {
+        ua: "Розрахувати вартість",
+        en: "Calculate the cost",
+      },
+    };
 
     const glazingFetch = async () => {
       const request = await fetch(URL);
@@ -60,13 +68,13 @@ const glazing_tabs = (decorationState) => {
         <div class="glazingTabs-card__price">
           <div class="price-container">
             <h3>${elem[lang].price}</h3>
-            <p>під ключ із встановленням</p>
+            <p class="container__subtitle">${translate.subtitle[lang]}</p>
           </div>
           <input
             name="button"
             class=" modal__button calculation__button"
             type="button"
-            value="Розрахувати вартість"
+            value="${translate.buttonValue[lang]}"
           />
         </div>`,
 
@@ -116,9 +124,6 @@ const glazing_tabs = (decorationState) => {
       );
       // --------------decoration order
       orderDecoration(decorationState);
-
-      // ------------translate
-      translate();
     };
     glazingFetch();
   };

@@ -13,6 +13,11 @@ const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
 
 // !----------------dev
+// -----------------------favicon
+const devFavicon = () => {
+  return src("./*.ico").pipe(dest("./dist/")).pipe(browserSync.stream());
+};
+
 // -----------------------api
 const devApi = () => {
   return src("./src/api/**")
@@ -144,7 +149,7 @@ const browsersync = () => {
 // ---------------------------tasks for start of console
 exports.default = series(
   clean,
-  parallel(devHtml, scripts, devImg, devFonts, devApi),
+  parallel(devHtml, scripts, devImg, devFonts, devApi, devFavicon),
   devStyles,
   browsersync
 );
@@ -206,6 +211,6 @@ const jsBuild = () => {
 
 exports.build = series(
   clean,
-  parallel(htmlBuild, cssBuild, jsBuild, devFonts, devImg, devApi),
+  parallel(htmlBuild, cssBuild, jsBuild, devFonts, devImg, devApi, devFavicon),
   browsersync
 );

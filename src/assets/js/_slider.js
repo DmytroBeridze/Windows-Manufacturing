@@ -3,6 +3,23 @@ const slider = () => {
     const glazingDataURL = url;
     const sliderCarousel = document.querySelector(sliderSelector);
     const sliderStructureSelector = sliderSelector.replace(/\./, "");
+    let lang = location.hash.substring(1);
+
+    // // !----------------------
+
+    // const glazingFetchPromiseAll = async () => {
+    //   const urlUrl = [
+    //     "./api/glasing_data.json",
+    //     "./api/decoration_carousel_data.json",
+    //   ];
+
+    //   const prom = await urlUrl.map((elem) =>
+    //     fetch(elem).then((res) => res.json())
+    //   );
+    //   return Promise.all(prom);
+    // };
+
+    // // !----------------------
 
     // ----------------------------------fetch
     const glazingFetch = async (url) => {
@@ -11,20 +28,51 @@ const slider = () => {
       return response;
     };
     // ----------------------------------Render slider
+    // TODO  як вірно робити запит якщо маю дві різні адреси в аргументах для побудови двох слайдерів
     glazingFetch(glazingDataURL).then((res) => {
+      // glazingFetchPromiseAll().then((res) => {
+      //   let [sliderArr, decorationArr] = res;
+
+      //   sliderArr.forEach((item) => {
+      //     let { img, title } = item;
+
+      //     let sliderCarousel = document.querySelector(".slider__carousel");
+
+      //     let slide = `<li draggable="false">
+      //     <div class="slider__card">
+      //     <img src=${img} alt="" />
+      //     <a>${title[lang]}</a>
+      //     </div> </li>`;
+
+      //     sliderCarousel.innerHTML += slide;
+      //     console.log(sliderCarousel);
+      //   });
+
+      //   decorationArr.forEach((item) => {
+      //     let { title } = item;
+      //     let sliderCarousel = document.querySelector(".decoration__carousel");
+      //     let decor = `
+      //         <li class="decoration__slider_card"  draggable="false">
+      //         <a href="">${title[lang]}</a>
+      //         </li>`;
+      //     sliderCarousel.innerHTML += decor;
+      //     console.log(sliderCarousel);
+      //   });
+      // });
+
       res.forEach((elem) => {
-        const { img, title } = elem;
+        let { img, title } = elem;
 
         const sliderStructure = {
           slider__carousel: `<li draggable="false">
             <div class="slider__card">
             <img src=${img} alt="" />
-            <a>${title}</a>
+            <a>${title[lang]}</a>
             </div> </li>`,
 
           decoration__carousel: `
             <li class="decoration__slider_card"  draggable="false">
-            <a href="">${elem}</a>
+            <a href="">${title[lang]}</a>
             </li>`,
         };
         sliderCarousel.innerHTML += sliderStructure[sliderStructureSelector];
@@ -118,6 +166,7 @@ const slider = () => {
 
       sliderCarousel.addEventListener("mouseup", scrollEnd);
       sliderCarousel.addEventListener("touchend", scrollEnd);
+      // });
     });
   };
   sliderSwitching(

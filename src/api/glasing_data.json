@@ -1,23 +1,38 @@
 [
 {
     "img":"./img/glazing_section/icons/1.png",
-    "title":"Дерев'яне скління"
+    "title":{
+        "ua":"Дерев'яне скління",
+        "en":"Wooden glazing"
+    }
 },
 {
     "img":"./img/glazing_section/icons/2.png",
-    "title":"Алюмінієве скління"
+    "title":{
+        "ua":"Алюмінієве скління",
+        "en":"Aluminum glazing"
+    }
 },
 {
     "img":"./img/glazing_section/icons/3.png",
-    "title":"Скління пластиковими рамками"
+    "title":{
+        "ua":"Скління пластиковими рамками",
+        "en":"Glazing with plastic frames"
+    }
+    
 },
 {
     "img":"./img/glazing_section/icons/4.png",
-    "title":"Французьке скління (панорамне)"
+    "title":{
+        "ua":"Французьке скління (панорамне)",
+        "en":"French glazing (panoramic)"
+    }
 },
 {
     "img":"./img/glazing_section/icons/5.png",
-    "title":"Скління з виносом"
+    "title":{
+        "ua":"Скління з виносом",
+        "en":"Glazing with extension"
+    }
 }
-
 ]

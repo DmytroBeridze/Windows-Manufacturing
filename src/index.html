@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="document-title">Склення балконів</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title class="document-title">Склення балконів</title>
   </head>
   <body>
     <div class="main-container">
@@ -228,12 +229,22 @@
             class="glazingtype__modal_select"
             id="glazing-type"
           >
-            <option selected disabled>Оберіть потрібне</option>
-            <option value="wood">Дерев'яне скління</option>
-            <option value="aluminum">Алюмінієве скління</option>
-            <option value="plastic">Засклення пластиковими рамами</option>
-            <option value="french">Панорамне скління</option>
-            <option value="overhang">Скління з виносом</option>
+            <option class="selectСhoice" selected disabled>
+              Оберіть потрібне
+            </option>
+            <option class="selectWood" value="wood">Дерев'яне скління</option>
+            <option class="selectAluminum" value="aluminum">
+              Алюмінієве скління
+            </option>
+            <option class="selectPlastic" value="plastic">
+              Засклення пластиковими рамами
+            </option>
+            <option class="selectFrench" value="french">
+              Панорамне скління
+            </option>
+            <option class="selectOverhang" value="overhang">
+              Скління з виносом
+            </option>
           </select>
           <div class="glazingtype__checkbox_container">
             <img src="./img/modal_calc/icon_cold.png" alt="" />
@@ -244,7 +255,8 @@
                 id="glazingtype__checkbox-cold"
               />
 
-              <span class="custom-checkbox"></span> <span>Холодне</span>
+              <span class="custom-checkbox"></span>
+              <span class="title-cold">Холодне</span>
             </label>
             <img src="./img/modal_calc/icon_warm.png" alt="" />
             <label>
@@ -255,7 +267,7 @@
               />
 
               <span class="custom-checkbox checkbox-warm"></span>
-              <span>Тепле</span>
+              <span class="title-warm">Тепле</span>
             </label>
           </div>
           <!-- </div> -->
@@ -275,7 +287,7 @@
     <section class="glazing">
       <div class="container glazing__container">
         <div class="glazing__header">
-          <h2>Скління балконів та лоджій</h2>
+          <h2 class="glazing__header_title">Скління балконів та лоджій</h2>
           <div class="glazing__header_sub"></div>
         </div>
 
@@ -551,27 +563,29 @@
         <ul class="guarantee__block">
           <li>
             <img src="./img/guarantees/1.png" alt="guarantee" />
-            <p>Висока якість</p>
+            <p class="guarantee-quality">Висока якість</p>
           </li>
           <li>
             <img src="./img/guarantees/2.png" alt="guarantee" />
-            <p>Виконання робіт під ключ</p>
+            <p class="guarantee-works">Виконання робіт під ключ</p>
           </li>
           <li>
             <img src="./img/guarantees/3.png" alt="guarantee" />
-            <p>Монтаж у короткі терміни</p>
+            <p class="guarantee-installation">Монтаж у короткі терміни</p>
           </li>
           <li>
             <img src="./img/guarantees/4.png" alt="guarantee" />
-            <p>Ціни від виробника</p>
+            <p class="guarantee-price">Ціни від виробника</p>
           </li>
           <li>
             <img src="./img/guarantees/5.png" alt="guarantee" />
-            <p>Безкоштовний замір та консультацію</p>
+            <p class="guarantee-measurement">
+              Безкоштовний замір та консультацію
+            </p>
           </li>
           <li>
             <img src="./img/guarantees/6.png" alt="guarantee" />
-            <p>Тепло та затишок на балконі</p>
+            <p class="guarantee-cosiness">Тепло та затишок на балконі</p>
           </li>
         </ul>
       </div>
@@ -585,19 +599,19 @@
           <li class="payment__item">
             <a href="./cash.html">
               <img src="./img/payment/wallet.png" alt="pay" />
-              <span>Готівкою</span>
+              <span class="payment-cash">Готівкою</span>
             </a>
           </li>
           <li class="payment__item">
             <a href="./card.html">
               <img src="./img/payment/credit-card.png" alt="pay" />
-              <span>Банківською карткою</span>
+              <span class="payment-card">Банківською карткою</span>
             </a>
           </li>
           <li class="payment__item">
             <a href="./cashless.html">
               <img src="./img/payment/museum.png" alt="pay" />
-              <span>Безготівковий розрахунок</span>
+              <span class="payment-nonсash">Безготівковий розрахунок</span>
             </a>
           </li>
         </ul>
@@ -615,19 +629,19 @@
             <div class="sale__timer_count">
               <div class="count-element">
                 <div id="day">00</div>
-                <span class="count-title">Днів</span>
+                <span class="count-title day-title">Днів</span>
               </div>
               <div class="count-element">
                 <div id="hour">00</div>
-                <span class="count-title">Годин</span>
+                <span class="count-title hour-title">Годин</span>
               </div>
               <div class="count-element">
                 <div id="minute">00</div>
-                <span class="count-title">Хвилин</span>
+                <span class="count-title minute-title">Хвилин</span>
               </div>
               <div class="count-element">
                 <div id="second">00</div>
-                <span class="count-title">Секунд</span>
+                <span class="count-title second-title">Секунд</span>
               </div>
             </div>
           </div>
@@ -653,19 +667,21 @@
           ></iframe>
 
           <div class="address">
-            <h3>Юридична адреса:</h3>
-            <p>ООО Fontan вулиця 1100-річчя Полтави, 2, Полтава</p>
-            <h3>Фактична адреса:</h3>
-            <p>
+            <h3 class="address__legal_title">Юридична адреса:</h3>
+            <p class="address__legal">
+              ООО Fontan вулиця 1100-річчя Полтави, 2, Полтава
+            </p>
+            <h3 class="address__actual_title">Фактична адреса:</h3>
+            <p class="address__actual">
               ООО Fontan вулиця 1100-річчя Полтави, 2, Полтава, Полтавська
               область, 36000
             </p>
-            <h3>Телефон:</h3>
-            <p>+8 (050) 650-30-71 (багатоканальний)</p>
-            <h3>E-mail:</h3>
-            <p><a href="#">info@startpage.ua</a></p>
-            <h3>Режим роботи:</h3>
-            <p>9:00 – 18:00 без вихідних</p>
+            <h3 class="address__phone_title">Телефон:</h3>
+            <p class="address__phone">+8 (050) 650-30-71 (багатоканальний)</p>
+            <h3 class="address__email_title">E-mail:</h3>
+            <p class="address__email"><a href="#">info@startpage.ua</a></p>
+            <h3 class="address__working-mode_title">Режим роботи:</h3>
+            <p class="address__working-mode">9:00 – 18:00 без вихідних</p>
           </div>
         </div>
       </div>

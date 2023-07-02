@@ -11,6 +11,7 @@
                 "thermal_insulation":"Теплоізоляція: 0,07 м2 * С/Вт",
                 "soundproofing":"Звукоізоляція: 20-27 дб",
                 "price":"2600 грн.кв.м."
+                
             },
             "en":{
                 "type":"wood",
@@ -192,7 +193,7 @@
               "en":{
                 "type":"rise",
                 "title":"Wood",
-                "img":"./img/glazing_section/wood/img_cold.png",
+                "img":"./img/glazing_section/rise/tree.jpg",
                 "structure_thickness":"Constructive thickness 42-58 mm.",
                 "glazing":"Glazing: polished glass (thickness 4 - 5 mm)",
                 "thermal_insulation":"Thermal insulation: 0,07 m2 * С/vt",

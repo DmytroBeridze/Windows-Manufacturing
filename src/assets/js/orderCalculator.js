@@ -4,6 +4,26 @@ const orderCalculator = (modalState) => {
     height = document.querySelectorAll("#height"),
     glazingType = document.querySelectorAll("#glazing-type"),
     temperatureType = document.querySelectorAll(".glazingtype__checkbox");
+  let lang = location.hash.substring(1);
+
+  // ---------placeholder translate
+  let placeholderTranslate = {
+    width: {
+      ua: "Ширина",
+      en: "Width",
+    },
+    height: {
+      ua: "Довжина",
+      en: "Height",
+    },
+  };
+
+  width.forEach(
+    (elem) => (elem.placeholder = placeholderTranslate.width[lang])
+  );
+  height.forEach(
+    (elem) => (elem.placeholder = placeholderTranslate.height[lang])
+  );
 
   // width heiht inputs check
   const withHeithCheck = (item) => {
@@ -45,7 +65,6 @@ const orderCalculator = (modalState) => {
           case "SELECT":
             modalState[prop] = elem.value;
         }
-        console.log(modalState);
       });
     });
   };

@@ -210,7 +210,7 @@ body{
 .modal-window{
     background-color:var(--whiteTxt);
     width: 360px;
-    // height: 450px;
+    height: fit-content;
     border-radius: 10px;
     padding: 40px 40px;
     display: flex;
@@ -219,7 +219,7 @@ body{
 }
 .modal__title{
     font-family: "OpenSans-Bold_700";
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -471,12 +471,14 @@ transform: scale(1.3);
 .glazingtype__modal.modal-window
 {
     width: fit-content;
+    height: fit-content;
     background-color:var(--whiteTxt);
     border-radius: 10px;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 350px;
     
 }
 
@@ -609,6 +611,8 @@ margin-right: 5px;
   padding: 10px;
 }
 
+
+
 .custom-checkbox::before{
     content: "";
     background-image: url(./img/modal_calc/check.png);
@@ -624,6 +628,7 @@ margin-right: 5px;
     transform: translate(-50%,-50%)scale(0);
     transition: 0.2s;
 }
+
 .custom-checkbox.checkbox-warm::before{ 
     content: "";
     background-image: url(./img/modal_calc/check_warm.png);
