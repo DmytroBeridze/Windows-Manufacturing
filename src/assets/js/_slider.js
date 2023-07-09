@@ -5,22 +5,6 @@ const slider = () => {
     const sliderStructureSelector = sliderSelector.replace(/\./, "");
     let lang = location.hash.substring(1);
 
-    // // !----------------------
-
-    // const glazingFetchPromiseAll = async () => {
-    //   const urlUrl = [
-    //     "./api/glasing_data.json",
-    //     "./api/decoration_carousel_data.json",
-    //   ];
-
-    //   const prom = await urlUrl.map((elem) =>
-    //     fetch(elem).then((res) => res.json())
-    //   );
-    //   return Promise.all(prom);
-    // };
-
-    // // !----------------------
-
     // ----------------------------------fetch
     const glazingFetch = async (url) => {
       const request = await fetch(url);
@@ -29,37 +13,8 @@ const slider = () => {
     };
     // ----------------------------------Render slider
     // TODO  як вірно робити запит якщо маю дві різні адреси в аргументах для побудови двох слайдерів
+
     glazingFetch(glazingDataURL).then((res) => {
-      // glazingFetchPromiseAll().then((res) => {
-      //   let [sliderArr, decorationArr] = res;
-
-      //   sliderArr.forEach((item) => {
-      //     let { img, title } = item;
-
-      //     let sliderCarousel = document.querySelector(".slider__carousel");
-
-      //     let slide = `<li draggable="false">
-      //     <div class="slider__card">
-      //     <img src=${img} alt="" />
-      //     <a>${title[lang]}</a>
-      //     </div> </li>`;
-
-      //     sliderCarousel.innerHTML += slide;
-      //     console.log(sliderCarousel);
-      //   });
-
-      //   decorationArr.forEach((item) => {
-      //     let { title } = item;
-      //     let sliderCarousel = document.querySelector(".decoration__carousel");
-      //     let decor = `
-      //         <li class="decoration__slider_card"  draggable="false">
-      //         <a href="">${title[lang]}</a>
-      //         </li>`;
-      //     sliderCarousel.innerHTML += decor;
-      //     console.log(sliderCarousel);
-      //   });
-      // });
-
       res.forEach((elem) => {
         let { img, title } = elem;
 
@@ -79,7 +34,6 @@ const slider = () => {
       });
 
       // --------------------------------Arrow
-      //!-----------------------------------------
       const sliderArrow = document.querySelectorAll(".slider-arrow");
       const sliderCard = document.querySelector(sliderCardSelector);
       let scrollStop = false;
@@ -166,7 +120,6 @@ const slider = () => {
 
       sliderCarousel.addEventListener("mouseup", scrollEnd);
       sliderCarousel.addEventListener("touchend", scrollEnd);
-      // });
     });
   };
   sliderSwitching(

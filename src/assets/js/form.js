@@ -22,11 +22,6 @@ const form = (modalState, decorationState) => {
       en: "Something went wrong",
     },
   };
-  // const stausMessage = {
-  //   load: "Йде відправка даних",
-  //   success: "Ми скоро зв'яжемося з вами",
-  //   fail: "Щось пішло не так",
-  // };
 
   // ------------------------fetch
   const formRequest = async (url, data) => {
@@ -45,6 +40,7 @@ const form = (modalState, decorationState) => {
   // -------------------------check phone input
   phoneInput.forEach((elem) => {
     elem.addEventListener("input", () => {
+      console.log(elem.value);
       elem.value = elem.value.replace(/\D/, "");
     });
   });
@@ -64,14 +60,12 @@ const form = (modalState, decorationState) => {
       let formData = new FormData(elem);
 
       // -------order calculator data
-
       if (elem.parentNode.classList.contains("calculation__order-popup")) {
         for (let key in modalState) {
           formData.set(key, modalState[key]);
         }
       }
       // -------order decoration data
-
       if (elem.parentNode.matches(".decorationTabs__content_form-container")) {
         for (let key in decorationState) {
           formData.set(key, decorationState[key]);

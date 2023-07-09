@@ -3,7 +3,7 @@ import modal from "./_modal.js";
 import orderDecoration from "./orderDecoration";
 
 const glazing_tabs = (decorationState) => {
-  const tabsRender = (containerSelector, URL, activeTabSelector) => {
+  const tabsRender = (containerSelector, URL) => {
     const tabsContainer = document.querySelector(containerSelector),
       tabsStructureContainerSelector = containerSelector.replace(/\./, "");
 
@@ -22,33 +22,34 @@ const glazing_tabs = (decorationState) => {
       },
     };
 
+    // style change
+    const tabsType = {
+      Warm: "warm",
+      Cold: "cold",
+      Plastic: "cold",
+      Aluminum: "warm",
+      Wood: "warm",
+    };
+
     const glazingFetch = async () => {
       const request = await fetch(URL);
       const response = await request.json();
-
-      const tabsType = {
-        Тепле: "warm",
-        Холодне: "cold",
-        Пластик: "cold",
-        Алюміній: "warm",
-        Дерево: "warm",
-      };
-
       response.forEach((elem) => {
         // ---------for change color "aluminum" card in block "Скління з виносом"
         if (elem.ua.type == "rise") {
-          tabsType.Алюміній = "cold";
+          tabsType.Aluminum = "cold";
         }
         // ---------for change border top radius and color title in block "Скління пластиковими рамками"
         if (elem.ua.type == "plastic") {
-          tabsType[elem.title] = "warm_plastic";
+          tabsType[elem.en.title] = "warm_plastic";
         }
+
         const tabsStructure = {
           glazingTabs__wrapper: `<div class="glazingTabs-card ${
-            tabsType[elem.ua.title]
+            tabsType[elem.en.title]
           }"data-type="${elem.ua.type}">
           <div class="glazingTabs-card__description">
-          <h3 class="glazingTabs-card__title ${tabsType[elem.ua.title]}">${
+          <h3 class="glazingTabs-card__title ${tabsType[elem.en.title]}">${
             elem[lang].title
           }</h3>
           <div class="glazingTabs-card__img-wrapper">
@@ -111,7 +112,6 @@ const glazing_tabs = (decorationState) => {
           }
         }
         // ------------// END internal cards in decorationTabs__wrapper------------------------
-        // TODO---Чого треба викликати тут чого не можна знайти  об'єкт в іншому місці за селектором------
       });
 
       // --------------Tabs switching
@@ -123,6 +123,7 @@ const glazing_tabs = (decorationState) => {
         ".popup__close-button"
       );
       // --------------decoration order
+      // ! Чи треба тут це викликати
       orderDecoration(decorationState);
     };
     glazingFetch();

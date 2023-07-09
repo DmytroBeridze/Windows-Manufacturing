@@ -1,7 +1,5 @@
 const staticForm = () => {
   let lang = location.hash.substring(1);
-  const langSelect = document.querySelector(".header__language");
-  // let lang = langSelect.value;
   const titles = [
     {
       ua: {

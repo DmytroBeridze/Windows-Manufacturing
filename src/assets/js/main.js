@@ -1,13 +1,14 @@
-import main_icons_module from "./_main_icons_module";
+import main_icons_module from "./main_icons_module";
 import form from "./form";
 import staticForm from "./_static_form";
 import modal from "./_modal";
 import slider from "./_slider";
-import glazing_tabs from "./_glazing_tabs";
+import glazing_tabs from "./glazing_tabs";
 import orderCalculator from "./orderCalculator";
 import galery from "./galery";
 import timer from "./timer";
 import translate from "./translate";
+import toggleThemeModule from "./toggle_theme_module";
 
 window.addEventListener("DOMContentLoaded", () => {
   translate();
@@ -37,6 +38,6 @@ window.addEventListener("DOMContentLoaded", () => {
   form(modalState, decorationState);
   galery();
   timer("2023-11-09");
-
+  toggleThemeModule();
   // orderCalculator(windowForm, "click", "window-form");
 });

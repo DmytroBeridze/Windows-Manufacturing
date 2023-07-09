@@ -37,7 +37,7 @@ const orderCalculator = (modalState) => {
   withHeithCheck(width);
   withHeithCheck(height);
 
-  // form data default
+  // form window data default
   modalState.form = 0;
   // ----------------------calculator
   const calculator = (node, event, prop) => {
