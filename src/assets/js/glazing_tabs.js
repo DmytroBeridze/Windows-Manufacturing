@@ -1,5 +1,5 @@
-import tabs_switching_module from "./_tabs_switching_module";
-import modal from "./_modal.js";
+import tabs_switching_module from "./tabs_switching_module.js";
+import modal from "./modal.js";
 import orderDecoration from "./orderDecoration";
 
 const glazing_tabs = (decorationState) => {

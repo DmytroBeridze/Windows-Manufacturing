@@ -40,17 +40,9 @@ const form = (modalState, decorationState) => {
   // -------------------------check phone input
   phoneInput.forEach((elem) => {
     elem.addEventListener("input", () => {
-      console.log(elem.value);
       elem.value = elem.value.replace(/\D/, "");
     });
   });
-  // ----------------------disapear placeholders
-
-  // document.querySelectorAll("input").forEach((elem) => {
-  //   elem.addEventListener("focus", () => {
-  //     elem.placeholder = "";
-  //   });
-  // });
 
   // ----------------------form
   forms.forEach((elem) => {

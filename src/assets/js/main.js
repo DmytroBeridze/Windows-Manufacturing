@@ -1,8 +1,8 @@
 import main_icons_module from "./main_icons_module";
 import form from "./form";
-import staticForm from "./_static_form";
-import modal from "./_modal";
-import slider from "./_slider";
+import staticForm from "./static_form";
+import modal from "./modal";
+import slider from "./slider";
 import glazing_tabs from "./glazing_tabs";
 import orderCalculator from "./orderCalculator";
 import galery from "./galery";
@@ -39,5 +39,4 @@ window.addEventListener("DOMContentLoaded", () => {
   galery();
   timer("2023-11-09");
   toggleThemeModule();
-  // orderCalculator(windowForm, "click", "window-form");
 });

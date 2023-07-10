@@ -66,8 +66,8 @@ const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
         closeButton.forEach((elem) => (elem.style.display = "block"));
       }
     };
-
     deleteCloseButton(clientWidth);
+
     //delete close button max-width: 576px resize
     window.addEventListener("resize", () => {
       let clientWidth = document.documentElement.clientWidth;
