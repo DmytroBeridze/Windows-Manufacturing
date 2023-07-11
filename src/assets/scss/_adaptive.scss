@@ -21,6 +21,7 @@
 // header
 .logo-title{
     max-width: 17rem;
+    
 }
 .header__button{
     width: 145px;
@@ -346,10 +347,7 @@ align-items: center;
 .modal-window__container form{
     width: 100%;
 }
-// decoration
-.decoration{
-    // width: 760px;
-}
+
 .decoration__header h2{
     font-size: 2.8rem;
 }
@@ -412,20 +410,14 @@ font-size: 2.8rem;
     flex-direction: column;
     align-items: center
 }
-// sale
-.sale{
-    // width:768px;
-}
+
 .sale-window__container{
     width: 100%;
 }
 .sale-window__container form{
     width: 100%;
 }
-// fedback
-.fedback{
-    // width: 768px;
-}
+
 .footer__contacts-wrapper{
     display: flex;
     flex-direction: column;
@@ -447,9 +439,9 @@ font-size: 2.8rem;
 }
 // Extra Small Devices Phones
 @media  only screen and (max-width: 576px){
-//main
-.main{
-    padding: 30px;
+    // header
+.logo-title{
+    text-align: center;
 }
 .main__info_title {
 font-size: 1.5rem;
@@ -483,6 +475,53 @@ font-size: 1.5rem;
 }
 .glazing__header h2{
     font-size: 2rem;
+}
+
+// calculation 
+.calculation__modal.modal-window,
+.glazingtype__modal.modal-window{
+    padding: 13px 14px;
+} 
+.calculation__modal_title,
+.glazingtype__modal_title{
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+.calculation__modal_title ~ p,
+.glazingtype__modal_title~p 
+{
+font-size: 1.5rem;
+margin-bottom: 20px;
+}
+.calculation__preview_container{
+    margin-bottom: 5px;
+}
+.calculation__preview_icon img{
+    width: 80px;
+}
+.icon-zoom{
+    transform: scale(1.2);
+}
+.calculation___fullsize_container img{
+    margin-bottom: 15px;
+}
+.calculation___fullsize_container img{
+    width: 235px;
+}
+.calculation__size{
+    margin-bottom: 10px;
+}
+.button-size {
+    padding: 17px 24px;
+}
+.glazingtype__checkbox_container{
+    gap: 10px;
+}
+.glazingtype__checkbox_container img{
+width: 60px;
+}
+.glazingtype-button.modal__button{
+    padding: 17px;
 }
 // decoration
 .decoration__container{
@@ -587,6 +626,8 @@ padding: 30px 0;
 
 }
 @media only screen and (max-width:480px){
+
+    // slider
 .slider__carousel li{
     width: calc(100%);
 }

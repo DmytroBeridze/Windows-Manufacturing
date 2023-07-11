@@ -46,7 +46,7 @@ const modal = (triggerSelector, targetSelector, closeButtonSelector) => {
         close();
       }
       // close window on screen size <= 576
-      if (clientWidth <= 576) {
+      if (clientWidth <= 576 && e.target === modalWindow) {
         close();
       }
     });
