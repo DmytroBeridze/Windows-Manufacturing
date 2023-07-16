@@ -39,4 +39,13 @@ window.addEventListener("DOMContentLoaded", () => {
   galery();
   timer("2023-11-09");
   toggleThemeModule();
+
+  // add styles after en translate
+  window.addEventListener("resize", () => {
+    let screenSize = document.documentElement.clientWidth,
+      workTime = document.querySelector(".workind-time_description p");
+    if (location.hash.substring(1) == "en" && screenSize <= 1230) {
+      workTime.style.fontSize = "1.2rem";
+    } else workTime.style.fontSize = "1.5rem";
+  });
 });

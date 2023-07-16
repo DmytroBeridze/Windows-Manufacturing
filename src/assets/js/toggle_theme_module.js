@@ -2,7 +2,8 @@ const toggleThemeModule = () => {
   const toggleBtn = document.querySelector(".toggle-theme"),
     themeLink = document.querySelector(".toggleThemeLink"),
     phoneIcon = document.querySelector(".phone-icon img"),
-    lang = location.hash.substring(1);
+    lang = location.hash.substring(1),
+    timesOfDayIcon = document.querySelector(['img[alt="day"]']);
 
   let translate = {
     day: {
@@ -28,11 +29,13 @@ const toggleThemeModule = () => {
     if (localStorage.getItem("theme") == "dark") {
       themeLink.setAttribute("href", "./dark-theme.css");
       phoneIcon.setAttribute("src", "./img/toggle_theme/white_phone_icon.svg");
-      toggleBtn.innerText = translate.day[lang];
+      timesOfDayIcon.setAttribute("src", "./img/black_theme/sun.svg");
+      // toggleBtn.innerText = translate.day[lang];
     } else {
       themeLink.setAttribute("href", "./style.css");
       phoneIcon.setAttribute("src", "./img/header/black_phone_icon.svg");
-      toggleBtn.innerText = translate.night[lang];
+      timesOfDayIcon.setAttribute("src", "./img/black_theme/moon.png");
+      // toggleBtn.innerText = translate.night[lang];
     }
   };
 

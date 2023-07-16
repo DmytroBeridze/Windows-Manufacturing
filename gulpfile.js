@@ -113,6 +113,39 @@ const scripts = () => {
     .pipe(dest("./dist"))
     .pipe(browserSync.stream());
 };
+
+// ?----------------------------------pages js
+const pagesScript = () => {
+  return src("./src/assets/js/pages/**/*.js")
+    .pipe(
+      webpack({
+        output: {
+          // filename: "[name].js",
+          filename: "card.js",
+        },
+        devtool: "source-map",
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [["@babel/preset-env", { targets: "defaults" }]],
+                },
+              },
+            },
+          ],
+        },
+      })
+    )
+
+    .pipe(dest("./dist"))
+    .pipe(browserSync.stream());
+};
+// ?---------------------------//-------pages js
+
 // ------------------------img
 const devImg = () => {
   return src("./src/assets/img/**")
@@ -138,18 +171,19 @@ const browsersync = () => {
     server: "./dist",
     // port: 4000,
   });
-  watch("./src/index.html", devHtml);
-  // watch("./src/*.html", devHtml);
+  watch("./src/*.html", devHtml);
+  // watch("./src/index.html", devHtml);
   watch("./src/assets/scss/**/*.scss", devStyles);
+  watch("./src/assets/js/pages/*.js", pagesScript);
   watch("./src/assets/js/**/*.js", scripts);
   watch("./src/assets/img/**", devImg);
-  watch("./src/assets/fonts/**", devImg);
+  watch("./src/assets/fonts/**", devFonts);
   watch("./src/api/**", devApi);
 };
 // ---------------------------tasks for start of console
 exports.default = series(
   clean,
-  parallel(devHtml, scripts, devImg, devFonts, devApi, devFavicon),
+  parallel(devHtml, scripts, devImg, devFonts, devApi, devFavicon, pagesScript),
   devStyles,
   browsersync
 );
@@ -208,9 +242,46 @@ const jsBuild = () => {
     )
     .pipe(dest("./dist"));
 };
+// ?----------------------------------pages js
+const jsPagesBuild = () => {
+  return src("./src/assets/js/pages/**/*.js")
+    .pipe(
+      webpack({
+        output: {
+          filename: "card.js",
+        },
+        // devtool: "source-map",
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [["@babel/preset-env", { targets: "defaults" }]],
+                },
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(dest("./dist"));
+};
+// ?--------------------//--------------pages js
 
 exports.build = series(
   clean,
-  parallel(htmlBuild, cssBuild, jsBuild, devFonts, devImg, devApi, devFavicon),
+  parallel(
+    htmlBuild,
+    cssBuild,
+    jsBuild,
+    devFonts,
+    devImg,
+    devApi,
+    devFavicon,
+    jsPagesBuild
+  ),
   browsersync
 );
