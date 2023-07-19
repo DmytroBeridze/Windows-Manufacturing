@@ -32,19 +32,15 @@ const translate = () => {
       //   // location.href = location.pathname + "#" + localStorage.getItem("lang");
       //   location.reload();
     }
-
     // !------start------------
     let currentTranslateObj = {};
     // console.log(window.location.pathname);
     switch (window.location.pathname) {
-      case "/index.html":
+      case "/":
         currentTranslateObj = langArr;
         break;
       case "/card.html":
         currentTranslateObj = translateCard;
-        break;
-
-      default:
         break;
     }
     for (let key in currentTranslateObj) {
