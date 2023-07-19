@@ -41,11 +41,18 @@ window.addEventListener("DOMContentLoaded", () => {
   toggleThemeModule();
 
   // add styles after en translate
-  window.addEventListener("resize", () => {
-    let screenSize = document.documentElement.clientWidth,
-      workTime = document.querySelector(".workind-time_description p");
+  let workTime = document.querySelector(".workind-time_description p"),
+    screenSize = document.documentElement.clientWidth;
+
+  const resize = (workTime, screenSize) => {
     if (location.hash.substring(1) == "en" && screenSize <= 1230) {
       workTime.style.fontSize = "1.2rem";
     } else workTime.style.fontSize = "1.5rem";
+  };
+  window.addEventListener("resize", () => {
+    screenSize = document.documentElement.clientWidth;
+    resize(workTime, screenSize);
   });
+
+  resize(workTime, screenSize);
 });
